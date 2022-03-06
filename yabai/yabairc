@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+yabai -m config status_bar                   on
 
 # the scripting-addition must be loaded manually if
 # you are running yabai on macOS Big Sur. Uncomment
@@ -29,7 +30,8 @@ yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
-
+yabai -m rule --add app="^Preview$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Koodo Reader" sticky=on layer=above manage=off
 
 
 # global settings
@@ -37,11 +39,12 @@ yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
-yabai -m config window_shadow                on
+#yabai -m config window_shadow off
+yabai -m config window_shadow float
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.90
+yabai -m config normal_window_opacity        0.80
 yabai -m config window_border                off
 yabai -m config window_border_width          6
 yabai -m config active_window_border_color   0xff775759
@@ -56,11 +59,12 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  25
-yabai -m config bottom_padding               5
+yabai -m config top_padding                  4
+#yabai -m config bottom_padding               42
 yabai -m config left_padding                 4
 yabai -m config right_padding                4
-yabai -m config window_gap                   8
+yabai -m config window_gap                   7
+yabai -m config external_bar main:4:42
 
 #Limelight addon (Kill it and start it each time Yabai starts)
 killall limelight &>/dev/null
@@ -68,12 +72,7 @@ limelight &>/dev/null &
 
 #nibar config for auto window and space refresh
 yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"nibar-spaces-jsx\"'"
-
-# if using multple displays, add an additional rule for "display_changed" event
-yabai -m signal --add event=display_changed \
-    action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"nibar-spaces-jsx\"'"
-# add these rules to auto-update the "windows" widget
+    action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"nibar-spaces-jsx\"'" # if using multple displays, add an additional rule for "display_changed" event yabai -m signal --add event=display_changed \ action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"nibar-spaces-jsx\"'" add these rules to auto-update the "windows" widget
 yabai -m signal --add event=window_focused \
     action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"nibar-windows-jsx\"'"
 yabai -m signal --add event=window_destroyed \
