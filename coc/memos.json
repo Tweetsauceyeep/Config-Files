@@ -33,7 +33,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "ec094d4a84a6212798a626af003e9ae59d00749a0ef501f1b9648cf29721a5f21924ca6b82a9942890a098e20d6eb3a0a47353610f4c0045f93478cddc8fde13"
       },
-      "expiry": 1643382451118
+      "expiry": 1647288140243
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -58,7 +58,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "3290964b6a0ea748081eea32a9c04c1a30a6316c8d453bd6d2ff008ade1effffce723f91f1a4fb2bf759c9e0e55dea4d2cd2eaf2327fcf49741a6f9c206bbe1c"
       },
-      "expiry": 1643382451119
+      "expiry": 1647288140392
     },
     "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10.v3": {
       "data": {
@@ -83,7 +83,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "8c954892f405d5f8a822b8fff126e71b7431c2b3534294263f98852fe6551d56d6746443d4109d1df3221d973b9abfa765fed4341be92d063c6dc49978a06da0"
       },
-      "expiry": 1643382451139
+      "expiry": 1647288140218
     },
     "/usr/local/bin/python3.10.v3": {
       "data": {
@@ -108,7 +108,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "6b377bb45173e99dccd68be87572b6186a5b60b8f876767e2f88ff39e19500f453e6a626f0f0dd28dd8be18a129cdddccd1b0af2c8678de1611f2929a9a53f36"
       },
-      "expiry": 1643382451324
+      "expiry": 1647288140211
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -133,7 +133,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "69cfa1d4dd1131949137dac4c2f7c31eeb83bba6b39ac9e61b9474d3e27cc45687ef9d542e635cca15abe97001665833ddf79cb4fcc6567da9f2f0c7ba095fc1"
       },
-      "expiry": 1643382451208
+      "expiry": 1647288140215
     },
     "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.v3": {
       "data": {
@@ -158,7 +158,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "9afb1241853a72ff502d680e67dbdf704c85e1e386f739224834cd211d35c10ae769fa348035f2a7e02d1b7f22c585666f1c7a37d9fb682544917ee70fdf1d32"
       },
-      "expiry": 1643382451212
+      "expiry": 1647288140400
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
@@ -305,14 +305,14 @@
           "displayName": "Python 3.10.0 64-bit"
         }
       },
-      "expiry": 1643383118976
+      "expiry": 1647288277064
     },
     "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.10.0 64-bit",
         "hash": "9afb1241853a72ff502d680e67dbdf704c85e1e386f739224834cd211d35c10ae769fa348035f2a7e02d1b7f22c585666f1c7a37d9fb682544917ee70fdf1d32-6daaf6edabe52fdc7537aa791c207c58"
       },
-      "expiry": 1643383118952
+      "expiry": 1647288140758
     },
     "/usr/local/bin/python3.9.v3": {
       "data": {
@@ -337,7 +337,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.9",
         "fileHash": "be0e6bc5d61b34a7ee1e7e61cd5a1d1b18cfd66f53f0c74e17c25d173aadd358e0014f6ccd90245bbe2ad8487caa17f5318bfad01e40c59174858464cda61f8a"
       },
-      "expiry": 1643382451400
+      "expiry": 1647288140404
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
       {
@@ -503,6 +503,52 @@
       },
       {
         "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.10.0-final",
+          "major": 3,
+          "minor": 10,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.10.0-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
+        "fileHash": "9afb1241853a72ff502d680e67dbdf704c85e1e386f739224834cd211d35c10ae769fa348035f2a7e02d1b7f22c585666f1c7a37d9fb682544917ee70fdf1d32",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.10.0-final",
+          "major": 3,
+          "minor": 10,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.10.0-final"
+        },
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
+        "fileHash": "8c954892f405d5f8a822b8fff126e71b7431c2b3534294263f98852fe6551d56d6746443d4109d1df3221d973b9abfa765fed4341be92d063c6dc49978a06da0",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
         "path": "/usr/local/bin/python3",
         "version": {
           "options": {
@@ -623,21 +669,21 @@
         "displayName": "Python 3.9.5 64-bit",
         "hash": "be0e6bc5d61b34a7ee1e7e61cd5a1d1b18cfd66f53f0c74e17c25d173aadd358e0014f6ccd90245bbe2ad8487caa17f5318bfad01e40c59174858464cda61f8a-3ab235c3f8cbf1ac430d993ae50c7c02"
       },
-      "expiry": 1643382451427
+      "expiry": 1647288140453
     },
     "/usr/local/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.10.0 64-bit",
         "hash": "69cfa1d4dd1131949137dac4c2f7c31eeb83bba6b39ac9e61b9474d3e27cc45687ef9d542e635cca15abe97001665833ddf79cb4fcc6567da9f2f0c7ba095fc1-c525305ec07418dc83e49813411cfa7e"
       },
-      "expiry": 1643382451429
+      "expiry": 1647288140451
     },
     "/usr/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "3290964b6a0ea748081eea32a9c04c1a30a6316c8d453bd6d2ff008ade1effffce723f91f1a4fb2bf759c9e0e55dea4d2cd2eaf2327fcf49741a6f9c206bbe1c-830095fdfbbb39188a0356cb8d3dcdc5"
       },
-      "expiry": 1643382451431
+      "expiry": 1647288140455
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
@@ -691,7 +737,7 @@
           "displayName": "Python 3.9.5 64-bit"
         }
       },
-      "expiry": 1643382451475
+      "expiry": 1647288140517
     },
     "/usr/local/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -721,7 +767,7 @@
           "displayName": "Python 3.10.0 64-bit"
         }
       },
-      "expiry": 1643382451479
+      "expiry": 1647288140511
     },
     "/usr/bin/python.interpreter.Details.v7": {
       "data": {
@@ -751,7 +797,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1643382451484
+      "expiry": 1647288140521
     },
     "ProposeLSBanner": false,
     "InterpreterAutoSeletionRule-cachedInterpreters": {
@@ -783,6 +829,35 @@
     "INTERPRETERS_CACHE_v3_PipEnvService:5c66a0c729089206331aa0d981d6cfcf": [],
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:5c66a0c729089206331aa0d981d6cfcf": [],
     "autoSelectedWorkspacePythonInterpreter-/Users/Sia/Dotfiles": {
+      "architecture": 3,
+      "path": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.10.0-final",
+        "major": 3,
+        "minor": 10,
+        "patch": 0,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.10.0-final"
+      },
+      "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
+      "fileHash": "9afb1241853a72ff502d680e67dbdf704c85e1e386f739224834cd211d35c10ae769fa348035f2a7e02d1b7f22c585666f1c7a37d9fb682544917ee70fdf1d32",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/Sia/Programming/the_odin_project/JS-Testing-Practice": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:f7215d471b9fdce0ad3771c97383289a": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:f7215d471b9fdce0ad3771c97383289a": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/Sia/Programming/the_odin_project/JS-Testing-Practice": {
       "architecture": 3,
       "path": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
       "version": {

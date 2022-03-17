@@ -1,4 +1,6 @@
 
+#set MYDATE (date +%m/%d/%y +%H:%M:%S)
+
 fish_vi_key_bindings
 
 fish_add_path /usr/local/bin #new
@@ -16,3 +18,11 @@ export FZF_DEFAULT_OPTS='-m --height 50% --border'
 starship init fish | source
 
 status --is-interactive; and rbenv init - fish | source
+
+alias gadd="git add ."
+alias storeNotes="git add . && git commit -m "$testDate""
+
+function lazygit
+  git add . && git commit -m "$argv" 
+  git push origin main
+end

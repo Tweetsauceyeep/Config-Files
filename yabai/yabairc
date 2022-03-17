@@ -32,6 +32,14 @@ yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=o
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Preview$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Koodo Reader" sticky=on layer=above manage=off
+yabai -m rule --add app="^Microsoft Word" sticky=on layer=above manage=off
+yabai -m rule --add app="^VLC" sticky=on layer=above manage=off
+yabai -m rule --add app="^Spek" sticky=on layer=above manage=off
+yabai -m rule --add app="^Archive Utility" sticky=on layer=above manage=off
+yabai -m rule --add app="^GIMP-2.10" sticky=on layer=above manage=off
+yabai -m rule --add app="^Ibooks" sticky=on layer=above manage=off
+yabai -m rule --add app="^Acrobat Reader" sticky=on layer=above manage=off
+yabai -m rule --add app="^calibre" sticky=on layer=above manage=off
 
 
 # global settings
@@ -59,12 +67,12 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  4
+yabai -m config top_padding                  10
 #yabai -m config bottom_padding               42
-yabai -m config left_padding                 4
-yabai -m config right_padding                4
+yabai -m config left_padding                 11
+yabai -m config right_padding                11
 yabai -m config window_gap                   7
-yabai -m config external_bar main:4:42
+yabai -m config external_bar main:4:50
 
 #Limelight addon (Kill it and start it each time Yabai starts)
 killall limelight &>/dev/null
