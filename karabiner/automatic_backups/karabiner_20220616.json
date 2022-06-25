@@ -196,32 +196,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "consumer_key_code": "scan_next_track"
-                    },
-                    "to": {
-                        "key_code": "fastforward"
-                    }
-                },
-                {
-                    "from": {
-                        "consumer_key_code": "scan_previous_track"
-                    },
-                    "to": {
-                        "key_code": "rewind"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "print_screen"
-                    },
-                    "to": {
-                        "key_code": "mission_control"
-                    }
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "mouse_key_xy_scale": 100
