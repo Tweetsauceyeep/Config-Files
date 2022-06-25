@@ -1,43 +1,43 @@
 !/usr/bin/env sh
 
 spacebar -m config position             bottom
-spacebar -m config height               30
-spacebar -m config title on
+spacebar -m config height               35
+spacebar -m config title off
 spacebar -m config spaces               on
 spacebar -m config clock                on
 spacebar -m config power                on
 spacebar -m config padding_left         20
 spacebar -m config padding_right        20
-spacebar -m config spacing_left         25
-spacebar -m config spacing_right        25
-spacebar -m config text_font            "Helvetica Neue:Bold:12.0"
-spacebar -m config icon_font            "Helvetica Neue:Bold:12.0"
+spacebar -m config spacing_left         20
+spacebar -m config spacing_right        20
+spacebar -m config text_font            "Iosevka Nerd Font:Bold:14.0"
+spacebar -m config icon_font            "Iosevka Nerd Font:Bold:18.0"
 spacebar -m config display_separator           true
 spacebar -m config display_separator_icon      "|"
 spacebar -m config background_color     0xff202020
 spacebar -m config foreground_color     0xffa8a8a8
 #spacebar -m config space_icon_color     0xff458588
 #spacebar -m config space_icon_color  0xffef5050
-spacebar -m config space_icon_color   0xff1793d1	 
+spacebar -m config space_icon_color   0xff1793d1
 
 
-spacebar -m config clock_icon 📅 
-#spacebar -m config power_icon_color     0xffcd950c
-#spacebar -m config battery_icon_color   0xffd75f5f
-#spacebar -m config dnd_icon_color       0xffa8a8a8
-#spacebar -m config clock_icon_color     0xffa8a8a8
-spacebar -m config power_icon_strip     🔌 ⚡
-#spacebar -m config space_icon_strip     0 I II III IV V VI VII VIII IX X
-spacebar -m config space_icon_strip     0 一 二 三 四 五 六 七 八
+spacebar -m config clock_icon 
+spacebar -m config power_icon_color     0xffcd950c
+spacebar -m config battery_icon_color   0xffFDD023
+##spacebar -m config dnd_icon_color       0xffa8a8a8
+spacebar -m config clock_icon_color   0xff1793d1
+spacebar -m config power_icon_strip       
+#spacebar -m config space_icon_strip     0 一 二 三 四 五 六 七 八
+spacebar -m config space_icon_strip   דּ    
 #spacebar -m config space_icon
 #spacebar -m config clock_icon
 #spacebar -m config dnd_icon
-spacebar -m config clock_format         " [ %m/%d/%y ]  ⏰  [ %H:%M:%S ]" #%R
+spacebar -m config clock_format         "%H:%M:%S |   %m/%d/%y | (%A)" 
 #spacebar -m config clock_format      "%a %d/%m/%y %R (%j)"
 
 #spacebar -m config power_icon_color     0xffcd950c
 spacebar -m config right_shell on
-spacebar -m config right_shell_icon 📶
+spacebar -m config right_shell_icon 
 #spacebar -m config right_shell_command "/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport -I | grep -w SSID | awk '{print $2}'"
 spacebar -m config right_shell_command "networksetup -getairportnetwork en1 | cut -c 24-"
 
