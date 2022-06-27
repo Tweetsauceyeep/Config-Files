@@ -16,6 +16,11 @@
 ### SKHD
 - Used to make keybinds for Yabai
 
-### Yabai
+### Yabai (not used like it just dont work)
 - Window Tiling Manager
 - Automatically resizes windows for you
+
+### Sketchybar
+- Status bar
+- https://github.com/FelixKratz/SketchyBar
+
