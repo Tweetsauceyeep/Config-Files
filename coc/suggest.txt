@@ -1,3 +1,4 @@
+spot|spotifyIndicator|around
 |volume.sh|file
 sket|sketchybar|around
 |clock.sh|file

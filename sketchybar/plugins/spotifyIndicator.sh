@@ -15,10 +15,10 @@ if [ "$(osascript -e 'if application "Spotify" is running then tell application 
 fi
 if [ $RUNNING -eq 0 ] && [ $PLAYING -eq 0 ]; then
   if [ "$ARTIST" == "" ]; then
-    sketchybar --set $NAME label="  $TRACK  $ALBUM"
+    sketchybar --set $NAME label=" $TRACK - $ALBUM"
   else
-    sketchybar --set $NAME label="  $TRACK    $ARTIST"
+    sketchybar --set $NAME label=" $TRACK - $ARTIST"
   fi
 else
-  sketchybar --set $NAME label="   No Songs Playing"
+  sketchybar --set $NAME label="  No Songs Playing"
 fi
