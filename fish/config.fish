@@ -23,4 +23,10 @@ function gacp
   git add . && git commit -m "$argv"
   git push origin main
 end
+
+function OpenEmacs
+~/scripts/OpenEmacs.sh
+end
+
+
 fish_add_path /Users/Sia/.spicetify

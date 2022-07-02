@@ -26,43 +26,33 @@ sketchybar --default updates=when_shown                    \
 
 ##### Adding Mission Control Space Indicators #####
 # https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-sketchybar --add space music left                              \
-           --set music associated_display=1                    \
-                      associated_space=2                      \
-                      icon=一                                 \
-                      icon.highlight_color=0xffd3869b         \
-                      click_script="open https://www.last.fm/home"\
-                     background.border_color=0xff1d2021 \
-                    background.border_width=1   \
-                                                              \
-           --add space browser left                               \
-           --set browser  associated_display=1                    \
-                      associated_space=3                      \
-                      icon=二                                 \
-                      icon.highlight_color=0xffd3869b         \
-                      click_script=""\
-                     background.border_color=0xff1d2021 \
-                    background.border_width=1   \
-                                                              \
-           --add space vim left                               \
-           --set vim associated_display=1                    \
-                      associated_space=4                      \
-                      icon=三                                \
-                      icon.highlight_color=0xffd3869b         \
-                      click_script=""\
-                     background.border_color=0xff1d2021 \
-                    background.border_width=1   \
-                                                              \
-           --add space orgMode left                               \
-           --set orgMode associated_display=1                    \
-                      associated_space=5                      \
-                      icon=四                                \
-                      icon.highlight_color=0xffd3869b         \
-                      click_script="osascript -e 'tell application \"emacs\" to activate'" \
-                     background.border_color=0xff1d2021 \
-                    background.border_width=1   \
-##### Adding Right Items #####
+############## NEW SPACES STUFF ###################
+##### Adding Mission Control Space Indicators #####
+# Now we add some mission control spaces:
+# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
+# to indicate active and available mission control spaces
 
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8")
+
+for i in "${!SPACE_ICONS[@]}"
+do
+  sketchybar --add space space.$i left                                     \
+             --set space.$i associated_space=$(($i+1))                     \
+                            icon=${SPACE_ICONS[i]}                         \
+                            icon.highlight_color=0xffFFFFFF                \
+                            icon.padding_left=8                            \
+                            icon.padding_right=8                           \
+                            background.padding_left=5                      \
+                            background.padding_right=5                     \
+                            background.color=0xff458588                    \
+                            background.corner_radius=5                     \
+                            background.height=35                           \
+                            label.drawing=off                              \
+                            script="~/.config/sketchybar/plugins/space.sh"                  \
+                            click_script="yabai -m space --focus $(($i+1))"
+done
+
+##### Adding Right Items #####
 
 sketchybar --add item battery right\
               --set battery update_freq=3 \
@@ -90,6 +80,9 @@ sketchybar --add event spotify_change "com.spotify.client.PlaybackStateChanged" 
            --subscribe spotifyIndicator spotify_change \
                                                                 \
 ##### CENTER ITEMRS #####
+sketchybar --add item system.label left\
+           --set system.label script="sketchybar --set \$NAME label={\"\$INFO\"}" \
+           --subscribe system.label front_app_switched
 
 ##### Finalizing Setup #####
 sketchybar --update
