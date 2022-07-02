@@ -39,14 +39,15 @@ do
   sketchybar --add space space.$i left                                     \
              --set space.$i associated_space=$(($i+1))                     \
                             icon=${SPACE_ICONS[i]}                         \
-                            icon.highlight_color=0xffFFFFFF                \
-                            icon.padding_left=8                            \
-                            icon.padding_right=8                           \
-                            background.padding_left=5                      \
-                            background.padding_right=5                     \
-                            background.color=0xff458588                    \
-                            background.corner_radius=5                     \
-                            background.height=35                           \
+                            icon.highlight_color=0xff458588                \
+                            icon.padding_left=15                            \
+                            icon.padding_right=15                           \
+                            background.padding_left=1                      \
+                            background.padding_right=1                     \
+                            background.color=0x44ffffff                    \
+                            background.corner_radius=2                    \
+                            background.height=25                           \
+                            background.width=20                            \
                             label.drawing=off                              \
                             script="~/.config/sketchybar/plugins/space.sh"                  \
                             click_script="yabai -m space --focus $(($i+1))"

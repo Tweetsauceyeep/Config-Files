@@ -1,3 +1,5 @@
+0xffeb|0xffebdbb2|around
+0xff|0xff458588|around
 |space.sh|file
 |plugins|file
 sketchybar|sketchybar|file
