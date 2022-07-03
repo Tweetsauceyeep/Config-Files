@@ -4,11 +4,17 @@
 
 ##### Bar Appearance #####
 sketchybar --bar height=35        \
-                 position=bottom\
-                 padding_left=15   \
+                 margin=20          \
+                 blur_radius=70   \
+                 position=top\
+                 padding_left=20   \
                  padding_right=20  \
-                 color=0xff000000 \
+                 color=0x15ffffff  \
                  topmost=true     \
+                 y_offset=10       \
+                 corner_radius=20   \
+                 border_width=1   \
+                 border_color=0xffECEFF4 \ 
                  ###color=0xff292928 \ dis da cala of grooveboox
 
 
@@ -32,19 +38,19 @@ sketchybar --default updates=when_shown                    \
 # https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
 # to indicate active and available mission control spaces
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8")
+SPACE_ICONS=("" "1" "2" "3" "4" "5" "6" "7")
 
 for i in "${!SPACE_ICONS[@]}"
 do
   sketchybar --add space space.$i left                                     \
              --set space.$i associated_space=$(($i+1))                     \
                             icon=${SPACE_ICONS[i]}                         \
-                            icon.highlight_color=0xff458588                \
+                            icon.highlight_color=0xffFFFFFFF                \
                             icon.padding_left=15                            \
                             icon.padding_right=15                           \
                             background.padding_left=1                      \
                             background.padding_right=1                     \
-                            background.color=0x44ffffff                    \
+                            background.color=0xff88C0D0                   \
                             background.corner_radius=2                    \
                             background.height=25                           \
                             background.width=20                            \
@@ -76,6 +82,7 @@ sketchybar --add item clock right\
 sketchybar --add event spotify_change "com.spotify.client.PlaybackStateChanged"                       \
            --add item spotifyIndicator center\
            --set spotifyIndicator label.font="Iosevka Nerd Font:Bold:13.5" \
+           --set spotifyIndicator background.color= 0xff88C0D0 \
            --set spotifyIndicator script="~/.config/sketchybar/plugins/spotifyIndicator.sh"           \
                                   click_script="osascript -e 'tell application \"Spotify\" to pause'" \
            --subscribe spotifyIndicator spotify_change \
@@ -83,7 +90,7 @@ sketchybar --add event spotify_change "com.spotify.client.PlaybackStateChanged" 
 ##### CENTER ITEMRS #####
 sketchybar --add item system.label left\
            --set system.label script="sketchybar --set \$NAME label={\"\$INFO\"}" \
-           --subscribe system.label front_app_switched
+           --subscribe system.label front_app_switched    \
 
 ##### Finalizing Setup #####
 sketchybar --update

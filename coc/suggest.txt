@@ -1,3 +1,14 @@
+padding_left|padding_left|around
+paddi|padding_right|around
+0xff88|0xff88C0D0|around
+backg|background|around
+l|label|around
+sys|system|around
+spot|spotifyIndicator|around
+spo|spotifyIndicator|around
+spotify|spotifyIndicator|around
+0xff|0xffFFFFFFF|around
+LightCy|LightCyan|around
 0xffeb|0xffebdbb2|around
 0xff|0xff458588|around
 |space.sh|file
@@ -6,7 +17,6 @@ sketchybar|sketchybar|file
 conf|config|around
 border|border_color|around
 d|drawing|around
-0xff|0xffFFFFFFF|around
 p|plugins|file
 sk|sketchybar|file
 w|window.sh|file
@@ -14,7 +24,6 @@ pl|plugins|file
 con|config|around
 o|OpenEmacs.sh|file
 sc|scripts|file
-spot|spotifyIndicator|around
 |volume.sh|file
 sket|sketchybar|around
 |clock.sh|file

@@ -19,11 +19,11 @@ yabai -m config window_shadow                on
 yabai -m config window_opacity               on
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.95
+yabai -m config normal_window_opacity        1.0
 yabai -m config window_border                on
 yabai -m config window_border_width          6
-yabai -m config active_window_border_color   0xff458588
-yabai -m config normal_window_border_color   0xffebdbb2
+yabai -m config active_window_border_color   0xff88C0D0
+yabai -m config normal_window_border_color   0xffE5E9F0
 #yabai -m config insert_feedback_color        0xffd75f5f
 
 
@@ -67,7 +67,7 @@ yabai -m config left_padding                 25
 yabai -m config right_padding                25
 yabai -m config window_gap                   10
 # if status bar is on the bottom then the value should be 50
-yabai -m config external_bar main:20:45
+yabai -m config external_bar main:55:20
 
 #Limelight addon (Kill it and start it each time Yabai starts)
 #killall limelight &>/dev/null
