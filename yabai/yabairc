@@ -54,7 +54,7 @@ yabai -m rule --add app="clementine" sticky=on layer=above manage=off
 yabai -m rule --add app="System Preferences" sticky=on layer=above manage=off
 
 # assigning apps to spaces yahhh
-yabai -m rule --add app="^Emacs" manage=on space=5
+yabai -m rule --add app=Emacs manage=on space=5
 yabai -m rule --add app="^Brave" manage=on space=3
 yabai -m rule --add app="^Spotify$" manage=on space=2
 
@@ -67,7 +67,7 @@ yabai -m config left_padding                 25
 yabai -m config right_padding                25
 yabai -m config window_gap                   10
 # if status bar is on the bottom then the value should be 50
-yabai -m config external_bar main:55:20
+yabai -m config external_bar main:20:65
 
 #Limelight addon (Kill it and start it each time Yabai starts)
 #killall limelight &>/dev/null

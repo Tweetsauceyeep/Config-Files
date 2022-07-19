@@ -1,3 +1,18 @@
+starp|startpage|around
+"hom|"homepage": "$1",|json
+Wb|Websites|tsserver-javascript
+wid|width?|tsserver-javascript
+shado|boxShadow?|tsserver-javascript
+paddingB|paddingBottom?|tsserver-javascript
+pa|padding?|tsserver-javascript
+|bold|tsserver-javascript
+font|fontWeight?|tsserver-javascript
+pad|paddingBottom?|tsserver-javascript
+heig|height|css
+backgrou|background-color|css
+|websites|tsserver-javascript
+Com|Components|tsserver-javascript
+Webs|Websites|tsserver-javascript
 padding_left|padding_left|around
 paddi|padding_right|around
 0xff88|0xff88C0D0|around
@@ -460,7 +475,6 @@ bacl|background-color|css
 back|background|css
 gray|gray|css
 colo|color|css
-backgrou|background-color|css
 background|background?|tsserver-javascript
 handleCa|handleCardShuffle|tsserver-javascript
 hand|handleCardClick|around
@@ -479,7 +493,6 @@ text|textAlign?|tsserver-javascript
 style|style?|tsserver-javascript
 |column|tsserver-javascript
 flexDir|flexDirection?|tsserver-javascript
-wid|width?|tsserver-javascript
 hei|height?|tsserver-javascript
 tex|textAlign?|tsserver-javascript
 top|top?|tsserver-javascript
