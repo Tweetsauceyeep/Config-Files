@@ -6,6 +6,9 @@
 #hyper - l : yabai -m space --move prev
 
 # if you're having troubles finding key codes for a key just type skhd --observe in a terminal and type a key. Pretty cool! Or just check the wiki.
+hyper - t : yabai -m config active_window_opacity        1.0
+hyper - y : yabai -m config active_window_opacity        0.93
+
 
 
 # move window to previous or next space
@@ -43,7 +46,7 @@ hyper - k : yabai -m window --focus next
 hyper - j : yabai -m window --focus prev
 
 ## swap window
-hyper - y : yabai -m window --swap west
+#hyper - y : yabai -m window --swap west
 # shift + alt - j : yabai -m window --swap south
 # shift + alt - k : yabai -m window --swap north
 hyper - 0x21 : yabai -m window --swap east # 0x21 is the "[" key

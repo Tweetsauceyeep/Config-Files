@@ -17,9 +17,9 @@ yabai -m config status_bar                   on
 # global settings
 yabai -m config window_shadow                on
 yabai -m config window_opacity               on
-yabai -m config window_opacity_duration      0.0
-yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        1.0
+yabai -m config window_opacity_duration      0.065
+yabai -m config active_window_opacity        0.92
+yabai -m config normal_window_opacity        0.88
 yabai -m config window_border                on
 yabai -m config window_border_width          6
 yabai -m config active_window_border_color   0xff88C0D0
@@ -34,28 +34,30 @@ yabai -m space 3 --label three
 yabai -m space 4 --label four
 yabai -m space 5 --label five
 yabai -m space 6 --label six
-yabai -m space 9 --label nine
+yabai -m space 7 --label seven
 
 
 # float system preferences| makes yabai ignore some stuff
-yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Preview$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Koodo Reader" sticky=on layer=above manage=off
-yabai -m rule --add app="^Microsoft Word" sticky=on layer=above manage=off
-yabai -m rule --add app="VLC" sticky=on layer=above manage=off
-yabai -m rule --add app="^Spek" sticky=on layer=above manage=off
-yabai -m rule --add app="Archive Utility" sticky=on layer=above manage=off
-yabai -m rule --add app="GIMP-2.10" sticky=on layer=above manage=off
-yabai -m rule --add app="Ibooks" sticky=on layer=above manage=off
-yabai -m rule --add app="Acrobat Reader" sticky=on layer=above manage=off
-yabai -m rule --add app="calibre" sticky=on layer=above manage=off
-yabai -m rule --add app="clementine" sticky=on layer=above manage=off
-yabai -m rule --add app="System Preferences" sticky=on layer=above manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$"   manage=off
+yabai -m rule --add app="^Finder$"   manage=off
+yabai -m rule --add app="^preview$"   manage=off
+yabai -m rule --add app="^Koodo Reader"   manage=off
+yabai -m rule --add app="^Microsoft Word"   manage=off
+yabai -m rule --add app="VLC"   manage=off
+yabai -m rule --add app="^Spek"   manage=off
+yabai -m rule --add app="Archive Utility"   manage=off
+yabai -m rule --add app="GIMP-2.10" manage=off
+yabai -m rule --add app="Ibooks"   manage=off
+yabai -m rule --add app="Acrobat Reader"   manage=off
+#yabai -m rule --add app="calibre"   manage=off
+yabai -m rule --add app="clementine"   manage=off
+yabai -m rule --add app="System Preferences"  manage=off
+yabai -m rule --add app="Anki"  manage=off
 
 # assigning apps to spaces yahhh
 yabai -m rule --add app=Emacs manage=on space=5
-yabai -m rule --add app="^Brave" manage=on space=3
+yabai -m rule --add app=Brave manage=on space=4
+yabai -m rule --add app="^Iterm2$" manage=on space=^3
 yabai -m rule --add app="^Spotify$" manage=on space=2
 
 
@@ -67,8 +69,8 @@ yabai -m config left_padding                 25
 yabai -m config right_padding                25
 yabai -m config window_gap                   10
 # if status bar is on the bottom then the value should be 50
-yabai -m config external_bar main:20:65
-
+#yabai -m config external_bar main:20:65 #if bar is the transparent rounded one
+yabai -m config external_bar main:20:50
 #Limelight addon (Kill it and start it each time Yabai starts)
 #killall limelight &>/dev/null
 #limelight &>/dev/null &
