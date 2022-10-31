@@ -16,7 +16,7 @@ export FZF_DEFAULT_OPTS='-m --height 50% --border'
 oh-my-posh init fish | source
 #eval "$(oh-my-posh init fish --config $(brew --prefix oh-my-posh)/themes/takuya.omp.json)" #some dev as life stuff
 #eval "$(oh-my-posh init fish --config $(brew --prefix oh-my-posh)/themes/tokyo.omp.json)"
-oh-my-posh init fish --config ~/.TakyuyaEdited.omp.json | source
+oh-my-posh init fish --config ~/.config/oh-my-posh-themes/.TakyuyaEdited.omp.json | source
 
 #status --is-interactive; and rbenv init - fish | source
 
