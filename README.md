@@ -1,4 +1,4 @@
-# Important stuff for my workflow
+# Important stuff for my workflow on MAC
 ### coc
 - This is for autocompletion in vim
 
@@ -24,4 +24,9 @@
 ### Sketchybar
 - Status bar
 - https://github.com/FelixKratz/SketchyBar
+
+# Other important things
+#### Symlinking
+- useful for dotfiles with things like vim and tmux where the config file should be in the home directory
+- ln -s <path to the file/folder to be linked> <the path of the link to be created>
 
