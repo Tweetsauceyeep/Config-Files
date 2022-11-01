@@ -28,5 +28,5 @@
 # Other important things
 #### Symlinking
 - useful for dotfiles with things like vim and tmux where the config file should be in the home directory
-- ln -s <path to the file/folder to be linked> <the path of the link to be created>
+- ln -s <path to the file/folder to be linked> <the path of the link to be created> <the path of the link to be created>
 
