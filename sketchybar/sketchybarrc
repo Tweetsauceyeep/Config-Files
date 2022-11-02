@@ -81,7 +81,7 @@ sketchybar --add item sound right\
               script="~/.config/sketchybar/plugins/volume.sh"\
                                                               \
 sketchybar --add item clock right\
-           --set clock         update_freq=1                                                      \
+           --set clock         update_freq=15                                                      \
                                script="~/.config/sketchybar/plugins/clock.sh"                      \
                                                                                                     \
 

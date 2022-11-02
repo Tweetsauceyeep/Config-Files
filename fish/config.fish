@@ -1,4 +1,5 @@
 fish_vi_key_bindings
+set fish_greeting
 
 fish_add_path /usr/local/bin #new
 fish_add_path /usr/local/sbin

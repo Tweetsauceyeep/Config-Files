@@ -1,3 +1,7 @@
+TERMHEIG|TERM_HEIGHT|around
+SCRE|SCREEN_HEIGHT|around
+TER|TERM_WIDTH|around
+SCRE|SCREEN_WIDTH|around
 arr|array|tsserver-javascript
 let|SVGFEDistantLightElement|tsserver-javascript
 D|Dracula|around
