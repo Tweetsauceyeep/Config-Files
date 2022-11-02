@@ -10,7 +10,7 @@ set -x PATH "/Library/Frameworks/Python.framework/Versions/3.10/bin" "$PATH"
 
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
-export FZF_DEFAULT_OPTS='-m --height 50% --border'
+#export FZF_DEFAULT_OPTS='-m --height 50% --border'
 
 # ~/.config/fish/config.fish
 #starship init fish | source

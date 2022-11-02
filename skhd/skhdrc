@@ -5,9 +5,12 @@ cmd + alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty     # 
 cmd + alt - e : open -a finder                                                # open finder
 cmd + alt - o : open -a obsidian
 cmd + alt - s : open -a spotify
-cmd + alt - b : open -a brave
-
-# app related 
+cmd + alt - b : open -a brave browser
+# app launcher
+cmd + alt - m : ~/scripts/popup.sh scripts/launcher.sh
+# pdf finder
+cmd + alt - k : ~/scripts/popup.sh scripts/pdf-launcher.sh
+# app related
 alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Float/unfloat the focused window
 
 ### Quick stuff ###

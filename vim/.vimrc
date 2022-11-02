@@ -103,8 +103,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
-"Plug 'justinmk/vim-sneak' "missing movement in vim (use s{char}{char} to look for stuff)
-Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'
@@ -115,26 +113,29 @@ Plug 'ctrlpvim/ctrlp.vim'
   let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 " ---> closing braces and brackets <---
 Plug 'jiangmiao/auto-pairs'
-"}}
-"{{ Git integration
+" Git integration
 " ---> git commands within vim <---
 Plug 'tpope/vim-fugitive'
 " ---> git changes on the gutter <---
 Plug 'airblade/vim-gitgutter'
-"{{ TMux - Vim integration
 Plug 'christoomey/vim-tmux-navigator'
-"}}
-"neoformat and prettier work together. to run prettier
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'branch': 'release/0.x'
   \ }
+Plug 'lervag/vimtex'
+
+"<----------- Plugins i dont use ------------->
+"Plug 'justinmk/vim-sneak' "missing movement in vim (use s{char}{char} to look for stuff)
+"Plug 'mhinz/vim-startify'
+
+
 
 "<-------Themes for vim---------> 
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'embark-theme/vim', { 'as': 'embark' } " ayo this is actually really nice
 "#Plug 'pineapplegiant/spaceduck' "literally duck this is so cool
-"Plug 'connorholyday/vim-snazzy' "looks clean ash
+Plug 'connorholyday/vim-snazzy' "looks clean ash
 Plug 'arcticicestudio/nord-vim'
 Plug 'edersonferreira/dalton-vim'
 "Plug 'ciaranm/inkpot'
@@ -151,6 +152,12 @@ Plug 'andreasvc/vim-256noir' "minimal colorscheme
 call plug#end()
 
 set relativenumber
+
+"<--------------- VIMTEX ------------------>
+let g:vimtex_view_method = 'skim'
+let g:vimtex_compiler_method = 'latexmk'
+
+
 
 "============== BASE 16 STUFF ADDED 10-30-22 ============================
 "if exists('$BASE16_THEME')

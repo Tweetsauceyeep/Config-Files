@@ -1,3 +1,23 @@
+fr|frac|vimtex
+|addtocounter|vimtex
+angle|angle|vimtex
+document|documentclass|vimtex
+arctan|arctan|vimtex
+sti|sticky|around
+|Reaction Images|file
+launh|launcher|around
+pd|pdf|around
+script|scripts|around
+po|popup.sh|file
+sc|scripts|file
+|Finished Skoolworks|file
+|-|file
+D|Desktop|file
+scr|scripts|around
+pop|popup.sh|file
+|popup.sh|file
+scr|scripts|file
+la|launcher.sh|file
 TERMHEIG|TERM_HEIGHT|around
 SCRE|SCREEN_HEIGHT|around
 TER|TERM_WIDTH|around
@@ -6,7 +26,6 @@ arr|array|tsserver-javascript
 let|SVGFEDistantLightElement|tsserver-javascript
 D|Dracula|around
 re|remedy_dark.yaml|file
-sc|scripts|file
 |current-song.sh|file
 sta|status|around
 fibs|fibsRec|tsserver-javascript
