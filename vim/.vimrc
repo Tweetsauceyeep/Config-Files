@@ -10,6 +10,11 @@ set nocompatible
 " removes insert word  below status bar
 set noshowmode
 
+"<-------------SPELLING----------------->
+"setlocal spell
+"set spelllang=nl,en_gb
+"inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 set backspace=indent,eol,start  " more powerful backspacing
 
 " Default Vim config + remaps
@@ -124,7 +129,12 @@ Plug 'prettier/vim-prettier', {
   \ 'branch': 'release/0.x'
   \ }
 Plug 'lervag/vimtex'
-
+Plug 'sirver/ultisnips'
+    let g:UltiSnipsExpandTrigger = '<leader> e'
+    let g:UltiSnipsJumpForwardTrigger = '<leader><tab>'
+    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+Plug 'vim-autoformat/vim-autoformat'
+    noremap <leader>a :Autoformat<CR>
 "<----------- Plugins i dont use ------------->
 "Plug 'justinmk/vim-sneak' "missing movement in vim (use s{char}{char} to look for stuff)
 "Plug 'mhinz/vim-startify'
@@ -155,8 +165,10 @@ set relativenumber
 
 "<--------------- VIMTEX ------------------>
 let g:vimtex_view_method = 'skim'
-let g:vimtex_compiler_method = 'latexmk'
-
+let g:vimtex_compiler_method ='latexmk'
+let g:tex_flavor='latex'
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 
 "============== BASE 16 STUFF ADDED 10-30-22 ============================
@@ -218,11 +230,11 @@ let g:fzf_layout = { 'down': '10' }
 
 
 " open startify on entry
- autocmd VimEnter *
-                 \   if !argc()
-                 \ |   Startify
-                 \ |   wincmd w
-                 \ | endif
+" autocmd VimEnter *
+"                 \   if !argc()
+"                 \ |   Startify
+"                 \ |   wincmd w
+"                 \ | endif
 
 
 "==========================================================================

@@ -2,7 +2,7 @@ fish_vi_key_bindings
 set fish_greeting
 
 fish_add_path /usr/local/bin #new
-fish_add_path /usr/local/sbin
+#fish_add_path /usr/local/sbin
 
 # Setting PATH for Python 3.10
 # The original version is saved in /Users/Sia/.config/fish/config.fish.pysave

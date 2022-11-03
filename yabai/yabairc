@@ -76,14 +76,16 @@ yabai -m rule --add title=popuplauncher manage=off sticky=on layer=above border=
 
 # general space settings
 yabai -m config layout                       bsp
-#yabai -m config top_padding                  5
-#yabai -m config bottom_padding               42
+yabai -m config top_padding                 20
+yabai -m config bottom_padding               20
 yabai -m config left_padding                 25
 yabai -m config right_padding                25
 yabai -m config window_gap                   10
 # if status bar is on the bottom then the value should be 50
 #yabai -m config external_bar main:20:65 #if bar is the transparent rounded one
-yabai -m config external_bar main:20:50
+#
+#yabai -m config external_bar main:20:50 #my main bar
+#
 #Limelight addon (Kill it and start it each time Yabai starts)
 #killall limelight &>/dev/null
 #limelight &>/dev/null &
