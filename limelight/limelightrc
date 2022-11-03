@@ -1,8 +1,0 @@
-
-limelight -m config width 4
-limelight -m config radius 12
-limelight -m config placement exterior
-limelight -m config normal_color 0xffebdbb2
-limelight -m config active_color 0xff458588
-
-echo "limelight configuration loaded.."

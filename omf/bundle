@@ -1,8 +1,0 @@
-package neovim
-package z
-theme agnoster
-theme bobthefish
-theme budspencer
-theme default
-theme pure
-theme toaster
