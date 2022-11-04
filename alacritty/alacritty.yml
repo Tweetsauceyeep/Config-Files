@@ -19,10 +19,10 @@ scrolling:
 
 font:
   normal:
-    #family: Iosevka Nerd Font
-    #style: Bold
-    family: CozetteVector
-    style: Regular
+    family: Iosevka Nerd Font
+    style: Bold
+    #family: CozetteVector
+    #style: Regular
   size: 23
 
 ### Nord ###

@@ -17,7 +17,9 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 oh-my-posh init fish | source
 #eval "$(oh-my-posh init fish --config $(brew --prefix oh-my-posh)/themes/takuya.omp.json)" #some dev as life stuff
 #eval "$(oh-my-posh init fish --config $(brew --prefix oh-my-posh)/themes/tokyo.omp.json)"
-oh-my-posh init fish --config ~/.config/oh-my-posh-themes/.TakyuyaEdited.omp.json | source
+#oh-my-posh init fish --config ~/.config/oh-my-posh-themes/.TakyuyaEdited.omp.json | source
+#oh-my-posh init fish --config ~/.config/oh-my-posh-themes/hul10.omp.json | source
+oh-my-posh init fish --config ~/.config/oh-my-posh-themes/nordtron.omp.json | source
 
 #status --is-interactive; and rbenv init - fish | source
 
