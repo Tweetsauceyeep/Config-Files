@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-yabai -m config status_bar                   on
+#yabai -m config status_bar                   on
 # the scripting-addition must be loaded manually if
 # you are running yabai on macOS Big Sur. Uncomment
 # the following line to have the injection performed
@@ -65,21 +65,23 @@ yabai -m rule --add app="Acrobat Reader"   manage=off
 yabai -m rule --add app="clementine"   manage=off
 yabai -m rule --add app="System Preferences"  manage=off
 yabai -m rule --add app="Anki"  manage=off
-yabai -m rule --add app="^Spotify$" manage=on space=2
+yabai -m rule --add app="^Spotify$" manage=on space=1
 
 # assigning apps to spaces yahhh
-yabai -m rule --add app="^Brave Browser$" manage=on sticky=off space=4
-yabai -m rule --add app="^Alacritty$" manage=on sticky=off space=3
+#yabai -m rule --add app="^Brave Browser$" manage=on sticky=off space=4
+#yabai -m rule --add app="^Alacritty$" manage=on sticky=off space=3
 
 # Launcher terminal
-yabai -m rule --add title=popuplauncher manage=off sticky=on layer=above border=on
+yabai -m rule --add title="popuplauncher" manage=off sticky=on layer=above border=off
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                 20
+yabai -m config top_padding                  20
 yabai -m config bottom_padding               20
-yabai -m config left_padding                 25
-yabai -m config right_padding                25
+#yabai -m config left_padding                 25
+#yabai -m config right_padding                25
+yabai -m config left_padding                 15
+yabai -m config right_padding                15
 yabai -m config window_gap                   10
 # if status bar is on the bottom then the value should be 50
 #yabai -m config external_bar main:20:65 #if bar is the transparent rounded one

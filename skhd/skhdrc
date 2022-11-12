@@ -5,20 +5,25 @@ cmd + alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty     # 
 cmd + alt - e : open -a finder                                                # open finder
 cmd + alt - o : open -a obsidian
 cmd + alt - s : open -a spotify
-cmd + alt - b : open -a brave browser
+
 # app launcher
 cmd + alt - m : ~/scripts/popup.sh scripts/launcher.sh
 # pdf finder
 cmd + alt - k : ~/scripts/popup.sh scripts/pdf-launcher.sh
 # app related
-alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Float/unfloat the focused window
+alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus 
+
+# popup file browser
+cmd + alt - p : ~/scripts/filebrowser.sh
+# Bookmarks
+cmd + alt - b : ~/scripts/popup.sh scripts/bookmarks.sh
+cmd + alt - v : ~/scripts/addBookmarks.sh
 
 ### Quick stuff ###
 cmd + alt - f : yabai -m window --toggle zoom-fullscreen                                                   # Toggle parent zoom
 cmd + alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Float/unfloat the focused window
 cmd + alt - n : yabai -m window --toggle border                                                            # toggle border for the focused window
 ### Quickly restart yabai ###
-alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 
 # if you're having troubles finding key codes for a key just type skhd --observe in a terminal and type a key. Pretty cool! Or just check the wiki.

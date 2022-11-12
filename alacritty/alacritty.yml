@@ -1,7 +1,7 @@
 env:
   TERM: xterm-256color
 window:
-  decorations: none
+  decorations: None
   opacity: 0.9
   padding:
     x: 5
@@ -12,20 +12,17 @@ window:
   scrolling:
     history: 5000
 
-
 scrolling:
   history: 10000
   multiplier: 3
 
 font:
   normal:
-    family: Iosevka Nerd Font
-    style: Bold
-    #family: CozetteVector
-    #style: Regular
+    family: CozetteVector
+    style: Regular
   size: 23
 
-### Nord ###
+## Nord ###
 colors:
   primary:
     background: '#2e3440'
@@ -52,18 +49,18 @@ colors:
     red: '#bf616a'
     green: '#a3be8c'
     yellow: '#ebcb8b'
-    blue: '#81a1c1'
+    blue: '#5E81AC' 
     magenta: '#b48ead'
-    cyan: '#88c0d0'
+    cyan: '#81A1C1'
     white: '#e5e9f0'
   bright:
     black: '#4c566a'
     red: '#bf616a'
     green: '#a3be8c'
     yellow: '#ebcb8b'
-    blue: '#81a1c1'
+    blue: '#5E81AC'
     magenta: '#b48ead'
-    cyan: '#8fbcbb'
+    cyan: '#81A1C1'
     white: '#eceff4'
   dim:
     black: '#373e4d'
