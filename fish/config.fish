@@ -1,3 +1,5 @@
+# something about vim backspace not working lmao
+stty erase '^?'
 fish_vi_key_bindings
 set fish_greeting
 

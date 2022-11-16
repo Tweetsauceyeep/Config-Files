@@ -20,5 +20,5 @@ if [ $RUNNING -eq 0 ] && [ $PLAYING -eq 0 ]; then
     sketchybar --set $NAME label=" $TRACK - $ARTIST"
   fi
 else
-  sketchybar --set $NAME label="  No Songs Playing"
+  sketchybar --set $NAME label=" "
 fi

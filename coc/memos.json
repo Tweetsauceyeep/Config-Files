@@ -33,7 +33,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "ec094d4a84a6212798a626af003e9ae59d00749a0ef501f1b9648cf29721a5f21924ca6b82a9942890a098e20d6eb3a0a47353610f4c0045f93478cddc8fde13"
       },
-      "expiry": 1668329723207
+      "expiry": 1668604998506
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -58,7 +58,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "3290964b6a0ea748081eea32a9c04c1a30a6316c8d453bd6d2ff008ade1effffce723f91f1a4fb2bf759c9e0e55dea4d2cd2eaf2327fcf49741a6f9c206bbe1c"
       },
-      "expiry": 1668329723248
+      "expiry": 1668604998547
     },
     "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10.v3": {
       "data": {
@@ -83,7 +83,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "8c954892f405d5f8a822b8fff126e71b7431c2b3534294263f98852fe6551d56d6746443d4109d1df3221d973b9abfa765fed4341be92d063c6dc49978a06da0"
       },
-      "expiry": 1668329723182
+      "expiry": 1668604998479
     },
     "/usr/local/bin/python3.10.v3": {
       "data": {
@@ -108,7 +108,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "6b377bb45173e99dccd68be87572b6186a5b60b8f876767e2f88ff39e19500f453e6a626f0f0dd28dd8be18a129cdddccd1b0af2c8678de1611f2929a9a53f36"
       },
-      "expiry": 1668329723178
+      "expiry": 1668604998530
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -133,7 +133,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "69cfa1d4dd1131949137dac4c2f7c31eeb83bba6b39ac9e61b9474d3e27cc45687ef9d542e635cca15abe97001665833ddf79cb4fcc6567da9f2f0c7ba095fc1"
       },
-      "expiry": 1668329723211
+      "expiry": 1668604998499
     },
     "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.v3": {
       "data": {
@@ -158,7 +158,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.10",
         "fileHash": "9afb1241853a72ff502d680e67dbdf704c85e1e386f739224834cd211d35c10ae769fa348035f2a7e02d1b7f22c585666f1c7a37d9fb682544917ee70fdf1d32"
       },
-      "expiry": 1668329723250
+      "expiry": 1668604998555
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
@@ -308,14 +308,14 @@
           "__store": true
         }
       },
-      "expiry": 1668329723191
+      "expiry": 1668604998487
     },
     "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.10.0 64-bit",
         "hash": "9afb1241853a72ff502d680e67dbdf704c85e1e386f739224834cd211d35c10ae769fa348035f2a7e02d1b7f22c585666f1c7a37d9fb682544917ee70fdf1d32-6daaf6edabe52fdc7537aa791c207c58"
       },
-      "expiry": 1668329723292
+      "expiry": 1668604998604
     },
     "/usr/local/bin/python3.9.v3": {
       "data": {
@@ -340,7 +340,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.9",
         "fileHash": "be0e6bc5d61b34a7ee1e7e61cd5a1d1b18cfd66f53f0c74e17c25d173aadd358e0014f6ccd90245bbe2ad8487caa17f5318bfad01e40c59174858464cda61f8a"
       },
-      "expiry": 1668329723273
+      "expiry": 1668604998580
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
       {

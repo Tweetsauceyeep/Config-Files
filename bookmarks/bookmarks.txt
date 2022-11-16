@@ -1,3 +1,6 @@
+urlbookmarks
+editbookmarks
+restartyabai
 https://castel.dev/post/lecture-notes-1/ #vim and latex
 https://csa.schoology.com/home
 https://github.com/
@@ -9,12 +12,19 @@ https://translate.google.com/
 https://mail.google.com/mail/u/0/#inbox #email
 https://lichess.org/
 https://www.nerdfonts.com/cheat-sheet
-https://github.com/linuxllc/sn #simple notes using fzf and md
 https://myanimelist.net/profile/pegaiskindasus
 https://www.instagram.com/
-https://www.youtube.com/watch?v=d_11QaTlf1I&t=521s #luke smith bookmarking
 https://ankiweb.net/decks/
-https://stackoverflow.com/questions/2762994/define-an-alias-in-fish-shell
-https://docs.google.com/document/d/1zsJFzwyeVWgwodbDekmEKRDwJ0v2UWaK0AQTTNhbpRI/edit #oral comm eval
 https://github.com/Tweetsauceyeep/Config-Files
 https://fullstackopen.com/en/
+https://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim #vim statusline
+https://nyaa.si/
+https://www.goodreads.com/user/show/88361217-james-scholz
+https://drive.google.com/drive/u/0/my-drive
+https://vi.stackexchange.com/questions/24683/how-to-enable-autocomplete-for-writing-in-english
+https://castel.dev/post/lecture-notes-2/
+https://docs.google.com/document/d/1Gt7hH3wc-XTfVvPomSXF17BfJt1YueZJIB267A6ktkQ/edit  #Physics and Precalc combined ws
+https://www.reddit.com/
+https://docs.google.com/document/d/1fH-nSqdJOz3kHTvNy5sqGZzQZZEVGqQ-/edit #UCSAP Key to Sustainable
+https://www.gnu.org/software/stow/
+https://www.edwinwenink.xyz/posts/42-vim_notetaking/

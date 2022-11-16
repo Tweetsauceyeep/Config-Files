@@ -18,22 +18,21 @@
 #                 border_color=0xffECEFF4 \ 
 #                 ###color=0xff292928 \ dis da cala of grooveboox
 
-sketchybar --bar height=35        \
+sketchybar --bar height=30        \
                  position=bottom\
                  padding_left=20   \
                  padding_right=20 \
-                 color=0xff2E3440\
+                 color=0xff000000
                  topmost=true     \
                  border_width=1 \
-                 border_color=0xff2E3440\ 
-
+                 border_color=0xff2E3440\35
 
 ##### Changing Defaults #####
 sketchybar --default updates=when_shown                    \
                      drawing=on                            \
                      icon.font="Iosevka Nerd Font:Bold:18.0"  \
                      icon.color=0xffffffff                 \
-                     label.font="Iosevka Nerd Font:Bold:15.5" \
+                     label.font="Iosevka Nerd Font:Bold:18" \
                      label.color=0xffFFFFFFF                \
                      label.padding_left=0                  \
                      label.padding_right=0                 \
@@ -72,9 +71,10 @@ done
 ##### Adding Right Items #####
 
 sketchybar --add item battery right\
-              --set battery update_freq=3 \
+              --set battery update_freq=15 \
               --set battery script="~/.config/sketchybar/plugins/power.sh" \
               --set battery icon=                                                            \
+              label.color=0xffBF616A               \
                                                         \
 sketchybar --add item sound right\
               --set sound  update_freq=5              \
@@ -90,7 +90,7 @@ sketchybar --add item clock right\
 #                               script="~/.config/sketchybar/plugins/wifi.sh"                      \
 sketchybar --add event spotify_change "com.spotify.client.PlaybackStateChanged"                       \
            --add item spotifyIndicator center\
-           --set spotifyIndicator label.font="Iosevka Nerd Font:Bold:13.5" \
+           --set spotifyIndicator label.font="Iosevka Nerd Font:Bold:18" \
            --set spotifyIndicator background.color= 0xff88C0D0 \
            --set spotifyIndicator script="~/.config/sketchybar/plugins/spotifyIndicator.sh"           \
                                   click_script="osascript -e 'tell application \"Spotify\" to pause'" \

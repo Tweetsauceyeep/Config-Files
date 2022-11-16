@@ -16,13 +16,13 @@
 # My custom space names for my 3 monitor setup. These names are used in some of my scripts.
 # global settings
 
-yabai -m config window_shadow                on
+yabai -m config window_shadow                off
 yabai -m config window_opacity               on
 yabai -m config window_opacity_duration      0.065
 yabai -m config active_window_opacity        0.92
 yabai -m config normal_window_opacity        0.88
 yabai -m config window_border                on
-yabai -m config window_border_width          6
+yabai -m config window_border_width          7
 yabai -m config window_placement             second_child
 #yabai -m config active_window_border_color   0xff88C0D0 #lighter blue and stuff
 yabai -m config active_window_border_color   0xff81A1C1
@@ -35,7 +35,7 @@ yabai -m config mouse_modifier cmd
 yabai -m config mouse_action1              resize
 yabai -m config mouse_action2              move
 yabai -m config mouse_drop_action            swap
-yabai -m config focus_follows_mouse          autoraise
+#yabai -m config focus_follows_mouse          autoraise
 
 
 
@@ -73,16 +73,15 @@ yabai -m rule --add app="^Spotify$" manage=on space=1
 
 # Launcher terminal
 yabai -m rule --add title="popuplauncher" manage=off sticky=on layer=above border=off
-
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  20
-yabai -m config bottom_padding               20
+yabai -m config top_padding                  17
+yabai -m config bottom_padding               17
 #yabai -m config left_padding                 25
 #yabai -m config right_padding                25
-yabai -m config left_padding                 15
-yabai -m config right_padding                15
-yabai -m config window_gap                   10
+yabai -m config left_padding                 12
+yabai -m config right_padding                12
+yabai -m config window_gap                   6
 # if status bar is on the bottom then the value should be 50
 #yabai -m config external_bar main:20:65 #if bar is the transparent rounded one
 #
@@ -94,4 +93,5 @@ yabai -m config window_gap                   10
 
 
 echo "yabai configuration loaded.. mybro"
+
 

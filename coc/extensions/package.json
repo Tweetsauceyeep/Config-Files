@@ -11,8 +11,8 @@
     "coc-prettier": ">=1.1.24",
     "coc-python": ">=1.2.13",
     "coc-snippets": ">=2.4.6",
-    "coc-tsserver": ">=1.8.6",
-    "coc-vimtex": ">=1.1.5"
+    "coc-vimtex": ">=1.1.5",
+    "coc-tsserver": ">=2.0.2"
   },
   "disabled": [],
   "locked": []
