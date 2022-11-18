@@ -1,0 +1,1 @@
+Vim add words to dictionary = hover over text and type zg

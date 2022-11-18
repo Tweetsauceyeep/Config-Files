@@ -129,9 +129,12 @@ Plug 'prettier/vim-prettier', {
 Plug 'lervag/vimtex', {'for': 'latex'}
 Plug 'sirver/ultisnips', {'for': ['javascript', 'latex', 'html', 'python']}
 Plug 'vimwiki/vimwiki', {'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'alvan/vim-closetag', {'for': ['javascript', 'html']}
 call plug#end()
 syntax off
-
+"close tag
+let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 " =================== FZF ================
 " Tell FZF to use RG - so we can skip .gitignore files even if not using
 " :GitFiles search
@@ -141,7 +144,6 @@ nmap <silent> <leader>j ;Rg<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 "With the above, every time we invoke Rg, FZF + ripgrep will not consider filename as a match in Vim.
 let g:fzf_layout = { 'down': '10' }
-
 
 "========= COC ==============
 let g:coc_global_extensions = [
@@ -161,4 +163,7 @@ let g:vimwiki_list = [{'path': '~/Obsidian-Notes/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_list = [{'path': '!/'}]
 
+"++++++++++++++++++ VIM MARKDOWN PREVIEW +++++++++++++++++=
+
+nnoremap <leader>m :MarkdownPreviewToggle<CR>
 

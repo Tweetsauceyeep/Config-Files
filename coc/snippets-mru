@@ -1,3 +1,19 @@
+define
+trycatch
+warn
+trycatch
+error
+import statement
+warn
+import statement
+trycatch
+new
+for
+define
+define
+if
+log
+for
 for
 for
 for

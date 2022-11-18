@@ -1,6 +1,9 @@
-urlbookmarks
+quicknotes
 editbookmarks
 restartyabai
+xquartz
+apps
+files
 https://castel.dev/post/lecture-notes-1/ #vim and latex
 https://csa.schoology.com/home
 https://github.com/
@@ -28,3 +31,8 @@ https://www.reddit.com/
 https://docs.google.com/document/d/1fH-nSqdJOz3kHTvNy5sqGZzQZZEVGqQ-/edit #UCSAP Key to Sustainable
 https://www.gnu.org/software/stow/
 https://www.edwinwenink.xyz/posts/42-vim_notetaking/
+https://pomofocus.io/
+https://www.youtube.com/watch?v=SCGA38auFIc #doomer jazz
+https://www.reddit.com/r/unixporn/comments/xpnwf0/oc_dmenu_as_a_daily_driver_app_launcher_for_macos/
+obsidiannotes
+https://github.com/iamcco/markdown-preview.nvim
