@@ -33,3 +33,5 @@ https://www.artstation.com/refriedspinach #futuristic art
 https://www.nordtheme.com/docs/colors-and-palettes
 https://github.com/FelixKratz/SketchyBar/discussions/12
 https://felixkratz.github.io/SketchyBar/config/bar
+https://www.facebook.com/
+https://github.com/zegervdv/homebrew-zathura

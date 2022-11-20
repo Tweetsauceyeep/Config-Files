@@ -1,4 +1,5 @@
 unlet! skip_defaults_vim
+set nocompatible
 " Colors and Formatting
 "highlight CursorLineNr cterm=NONE ctermbg=cyan ctermfg=white gui=NONE guibg=#81A1C1 guifg=white
 highlight LineNr ctermfg=white
@@ -132,7 +133,7 @@ Plug 'vimwiki/vimwiki', {'for': 'markdown'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'alvan/vim-closetag', {'for': ['javascript', 'html']}
 call plug#end()
-syntax off
+syntax on
 "close tag
 let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 " =================== FZF ================
