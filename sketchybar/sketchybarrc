@@ -1,107 +1,174 @@
-#0xff2E3440 This is a demo config to bring across some of the most important commands more easily.
+# This is a demo config to show some of the most important commands more easily.
 # This is meant to be changed and configured, as it is intentionally kept sparse.
-# For a more advanced configuration example see https://github.com/FelixKratz/SketchyBar/discussions/47#discussioncomment-2027233
+# For a more advanced configuration example see my dotfiles:
+# https://github.com/FelixKratz/dotfiles
+
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+BACKGROUND_COLOR="0xff2E3440"
+
 
 ##### Bar Appearance #####
-#This like a transparent bar typa thing
-#sketchybar --bar height=35        \
-#                 margin=20          \
-#                 blur_radius=70   \
-#                 position=bottom\
-#                 padding_left=20   \
-#                 padding_right=20  \
-#                 color=0x15ffffff  \
-#                 topmost=true     \
-#                 y_offset=10       \
-#                 corner_radius=20   \
-#                 border_width=1   \
-#                 border_color=0xffECEFF4 \ 
-#                 ###color=0xff292928 \ dis da cala of grooveboox
+# Configuring the general appearance of the bar, these are only some of the
+# options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+#color=0x00000000 
+#color=0x15ffffff
+#blur_radius=80    
 
-sketchybar --bar height=30        \
-                 position=bottom\
-                 padding_left=20   \
-                 padding_right=20 \
-                 color=0xff000000
-                 topmost=true     \
-                 border_width=1 \
-                 border_color=0xff2E3440\35
+sketchybar --bar height=26         \
+                 position=top\
+                 sticky=off        \
+                 padding_left=25   \
+                 padding_right=16  \
+                 y_offset=5       \
+                 corner_radius=20  \
+                 topmost=off        \
+                 color=0x00000000 
+
 
 ##### Changing Defaults #####
+# We now change some default values that are applied to all further items
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+
 sketchybar --default updates=when_shown                    \
                      drawing=on                            \
-                     icon.font="Iosevka Nerd Font:Bold:18.0"  \
+                     icon.font="Hack Nerd Font:Bold:17.0"  \
                      icon.color=0xffffffff                 \
-                     label.font="Iosevka Nerd Font:Bold:18" \
-                     label.color=0xffFFFFFFF                \
-                     label.padding_left=0                  \
-                     label.padding_right=0                 \
+                     label.font="Hack Nerd Font:Bold:14.0" \
+                     label.color=0xffffffff                \
+                     label.padding_left=4                  \
+                     label.padding_right=4                 \
                      icon.padding_left=4                   \
-                     icon.padding_right=4            \
+                     icon.padding_right=4
+                     background.padding_right=4 \
+                     background.padding_left=4 \
 
-##### Adding Mission Control Space Indicators #####
-# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-############## NEW SPACES STUFF ###################
-##### Adding Mission Control Space Indicators #####
-# Now we add some mission control spaces:
-# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-# to indicate active and available mission control spaces
 
-SPACE_ICONS=("" "1" "2" "3" "4" "5" "6" "7")
 
-for i in "${!SPACE_ICONS[@]}"
-do
-  sketchybar --add space space.$i left                                     \
-             --set space.$i associated_space=$(($i+1))                     \
-                            icon=${SPACE_ICONS[i]}                         \
-                            icon.highlight_color=0xffFFFFFFF                \
-                            icon.padding_left=15                            \
-                            icon.padding_right=15                           \
-                            background.padding_left=1                      \
-                            background.padding_right=1                     \
-                            background.color=0xff88C0D0                   \
-                            background.corner_radius=2                    \
-                            background.height=25                           \
-                            background.width=20                            \
-                            label.drawing=off                              \
-                            script="~/.config/sketchybar/plugins/space.sh"                  \
-                            click_script="yabai -m space --focus $(($i+1))"
-done
+###### Adding Center Shit ######
+SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
+POPUP_SCRIPT="sketchybar -m --set \$NAME popup.drawing=toggle"
 
+sketchybar --add       event           spotify_change $SPOTIFY_EVENT      \
+           --add       item            spotify.name center                \
+           --set       spotify.name    click_script="$POPUP_SCRIPT"       \
+                                       popup.horizontal=on                \
+                                       popup.align=center                 \
+                                       popup.background.border_width=2   \
+                                       popup.background.corner_radius=3   \
+                                       popup.background.border_color=0xff9dd274  \
+                                       popup.background.color=0xff9dd274  \
+                                       label.padding_left=20                  \
+                                       label.padding_right=20                 \
+                                       icon.drawing=off                   \
+                                                                          \
+           --add       item            spotify.back popup.spotify.name    \
+           --set       spotify.back    icon=                             \
+                                       icon.padding_left=5                \
+                                       icon.padding_right=5               \
+                                       script="$PLUGIN_DIR/spotify.sh"    \
+                                       label.drawing=off                  \
+           --subscribe spotify.back    mouse.clicked                      \
+                                                                          \
+           --add       item            spotify.play popup.spotify.name    \
+           --set       spotify.play    icon=                             \
+                                       icon.padding_left=5                \
+                                       icon.padding_right=5               \
+                                       updates=on                         \
+                                       label.drawing=off                  \
+                                       script="$PLUGIN_DIR/spotify.sh"    \
+           --subscribe spotify.play    mouse.clicked spotify_change       \
+                                                                          \
+           --add       item            spotify.next popup.spotify.name    \
+           --set       spotify.next    icon=                             \
+                                       icon.padding_left=5                \
+                                       icon.padding_right=10              \
+                                       label.drawing=off                  \
+                                       script="$PLUGIN_DIR/spotify.sh"    \
+           --subscribe spotify.next    mouse.clicked                      \
+                                                                          \
+           --add       item            spotify.shuffle popup.spotify.name \
+           --set       spotify.shuffle icon=咽                             \
+                                       icon.highlight_color=0xff1DB954    \
+                                       icon.padding_left=5                \
+                                       icon.padding_right=5               \
+                                       label.drawing=off                  \
+                                       script="$PLUGIN_DIR/spotify.sh"    \
+           --subscribe spotify.shuffle mouse.clicked                      \
+                                                                          \
+           --add       item            spotify.repeat popup.spotify.name  \
+           --set       spotify.repeat  icon=凌                             \
+                                       icon.highlight_color=0xff1DB954    \
+                                       icon.padding_left=5                \
+                                       icon.padding_right=5               \
+                                       label.drawing=off                  \
+                                       script="$PLUGIN_DIR/spotify.sh"    \
+           --subscribe spotify.repeat  mouse.clicked
+#
 ##### Adding Right Items #####
+# In the same way as the left items we can add items to the right side.
+# Additional position (e.g. center) are available, see:
+# https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
+#--set spotifyIndicator label.font="Iosevka Nerd Font:Bold:15" \
 
-sketchybar --add item battery right\
-              --set battery update_freq=15 \
-              --set battery script="~/.config/sketchybar/plugins/power.sh" \
-              --set battery icon=                                                            \
-              label.color=0xffBF616A               \
-                                                        \
-sketchybar --add item sound right\
-              --set sound  update_freq=5              \
-              script="~/.config/sketchybar/plugins/volume.sh"\
+
+sketchybar --add alias "SystemUIServer,AirPortExtra" right \
+sketchybar --add item battery right                      \
+           --set battery script="$PLUGIN_DIR/power.sh"   \
+                         update_freq=10                  \
+                         icon.color=0xffEBCB8B           \
+                         label.padding_left=0                  \
+                         label.padding_right=10                 \
+           --subscribe battery system_woke               \
+                                                         \
+                                                          \
+sketchybar --add item sound right                         \
+              --set sound  update_freq=5                      \
+                         script="~/.config/sketchybar/plugins/volume.sh" \
+                         icon.color=0xff88C0D0          \
+                         icon.padding_left=10                  \
                                                               \
-sketchybar --add item clock right\
-           --set clock         update_freq=15                                                      \
-                               script="~/.config/sketchybar/plugins/clock.sh"                      \
-                                                                                                    \
+sketchybar --add item clock right                        \
+           --set clock   update_freq=10                  \
+                         script="$PLUGIN_DIR/clock.sh"   \
+                         label.padding_right=12                 \
+                         background.padding_right=25       \
+                                                         \
 
-#sketchybar --add item wifi right                                                                  \
-#           --set wifi update_freq=20                                                      \
-#                               script="~/.config/sketchybar/plugins/wifi.sh"                      \
-sketchybar --add event spotify_change "com.spotify.client.PlaybackStateChanged"                       \
-           --add item spotifyIndicator center\
-           --set spotifyIndicator label.font="Iosevka Nerd Font:Bold:18" \
-           --set spotifyIndicator background.color= 0xff88C0D0 \
-           --set spotifyIndicator script="~/.config/sketchybar/plugins/spotifyIndicator.sh"           \
-                                  click_script="osascript -e 'tell application \"Spotify\" to pause'" \
-           --subscribe spotifyIndicator spotify_change \
-                                                                \
-##### CENTER ITEMRS #####
-sketchybar --add item system.label left\
-           --set system.label script="sketchybar --set \$NAME label={\"\$INFO\"}" \
-           --subscribe system.label front_app_switched    \
+#
+#sketchybar --add alias "SystemUIServer,AppleBluetoothExtra" right \
+
+#### ADDING BRACKETS 
+source "$PLUGIN_DIR/spaces.sh"
+
+sketchybar --add bracket center_items   spotify.name center \
+           --set         center_items   background.color="$BACKGROUND_COLOR"   \
+                                        background.corner_radius=20   \
+                                        background.height=25          \
+
+sketchybar --add bracket right_side     clock                         \
+                                                                      \
+           --set         right_side     background.color="$BACKGROUND_COLOR"   \
+                                        background.corner_radius=20   \
+                                        background.height=25          \
+                                                                      \
+sketchybar --add bracket power_volume    "SystemUIServer,AirPortExtra"  \
+                                         battery                      \
+                                         sound                        \
+           --set         power_volume    background.color="$BACKGROUND_COLOR"   \
+                                         background.corner_radius=20   \
+                                         background.height=25          \
+                                         
+
+
 
 ##### Finalizing Setup #####
+# The below command is only needed at the end of the initial configuration and
+# should never be run in an item script.
+
 sketchybar --update
 
-echo "sketchybar configuration loaded.."
+occho "sketchybar configuration loaded.."

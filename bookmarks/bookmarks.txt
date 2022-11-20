@@ -1,9 +1,9 @@
-quicknotes
-editbookmarks
+ﴬ notes
+ editbookmarks
+ editdmenu
 restartyabai
+sketchybar
 xquartz
-apps
-files
 https://castel.dev/post/lecture-notes-1/ #vim and latex
 https://csa.schoology.com/home
 https://github.com/
@@ -20,19 +20,16 @@ https://www.instagram.com/
 https://ankiweb.net/decks/
 https://github.com/Tweetsauceyeep/Config-Files
 https://fullstackopen.com/en/
-https://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim #vim statusline
 https://nyaa.si/
 https://www.goodreads.com/user/show/88361217-james-scholz
 https://drive.google.com/drive/u/0/my-drive
-https://vi.stackexchange.com/questions/24683/how-to-enable-autocomplete-for-writing-in-english
-https://castel.dev/post/lecture-notes-2/
-https://docs.google.com/document/d/1Gt7hH3wc-XTfVvPomSXF17BfJt1YueZJIB267A6ktkQ/edit  #Physics and Precalc combined ws
 https://www.reddit.com/
-https://docs.google.com/document/d/1fH-nSqdJOz3kHTvNy5sqGZzQZZEVGqQ-/edit #UCSAP Key to Sustainable
-https://www.gnu.org/software/stow/
-https://www.edwinwenink.xyz/posts/42-vim_notetaking/
 https://pomofocus.io/
-https://www.youtube.com/watch?v=SCGA38auFIc #doomer jazz
 https://www.reddit.com/r/unixporn/comments/xpnwf0/oc_dmenu_as_a_daily_driver_app_launcher_for_macos/
-obsidiannotes
-https://github.com/iamcco/markdown-preview.nvim
+https://www.reddit.com/r/suckless/comments/nu8by3/dmenu_on_mac_os/
+https://www.youtube.com/
+https://www.artstation.com/nikojyp #beautiful landscape wallpapers
+https://www.artstation.com/refriedspinach #futuristic art 
+https://www.nordtheme.com/docs/colors-and-palettes
+https://github.com/FelixKratz/SketchyBar/discussions/12
+https://felixkratz.github.io/SketchyBar/config/bar

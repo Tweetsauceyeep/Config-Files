@@ -4,10 +4,9 @@
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty     # open a terminal
 cmd + alt - e : open -a finder                                                # open finder
 cmd + alt - o : open -a obsidian
-cmd + alt - s : open -a spotify
 
 # app launcher
-ctrl - m : ~/.config/scripts/launcher.sh
+ctrl - m : ~/.config/scripts/applauncher.sh
 # pdf finder
 cmd + ctrl - l :  ~/.config/scripts/pdf-launcher.sh
 # app related
@@ -19,11 +18,14 @@ ctrl - p : ~/scripts/filebrowser.sh
 #ctrl - b : ~/.config/scripts/popup.sh .config/scripts/bookmarks.sh
 ctrl - b : ~/.config/scripts/bookmarks.sh
 cmd + alt - v : ~/.config/scripts/addBookmarks.sh
+cmd + alt - w : ~/.config/scripts/changewallpaper.sh
+cmd + alt - n : ~/.config/scripts/dmenunotes.sh 
+cmd + alt - c : ~/.config/scripts/confedit.sh
 
 ### Quick stuff ###
 cmd + alt - f : yabai -m window --toggle native-fullscreen                                                   # Toggle parent zoom
 cmd + alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Float/unfloat the focused window
-cmd + alt - n : yabai -m window --toggle border                                                            # toggle border for the focused window
+cmd + alt - b : yabai -m window --toggle border                                                            # toggle border for the focused window
 cmd + alt - p : yabai -m config bottom_padding               20
 cmd + alt - u : yabai -m config bottom_padding               35
 cmd + alt - r : yabai -m window --resize abs:750:600

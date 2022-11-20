@@ -143,7 +143,30 @@ nmap <silent> <leader>f ;Files<CR>
 nmap <silent> <leader>j ;Rg<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 "With the above, every time we invoke Rg, FZF + ripgrep will not consider filename as a match in Vim.
-let g:fzf_layout = { 'down': '10' }
+
+hi! FZFTest guifg=#FF0000 guibg=NONE ctermbg=NONE ctermfg=Cyan
+let g:fzf_layout = {
+    \ 'window': {
+        \'width': 0.8,
+        \'height': 0.8,
+        \'highlight': 'FZFTest'
+    \ }
+\ }
+
+let g:fzf_colors =
+    \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'FZFTest'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 
 "========= COC ==============
 let g:coc_global_extensions = [

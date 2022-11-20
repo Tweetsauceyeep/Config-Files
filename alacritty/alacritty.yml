@@ -1,8 +1,8 @@
 env:
   TERM: xterm-256color
 window:
-  decorations: None
-  opacity: 0.8
+  decorations: buttonless
+  opacity: 1
   padding:
     x: 5
     y: 15
