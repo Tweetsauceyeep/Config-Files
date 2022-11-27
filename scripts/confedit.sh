@@ -14,6 +14,9 @@ declare -a options=(
 "scripts - $HOME/.config/scripts"
 "spotifytui - $HOME/.config/spotify-tui/config.yml"
 "dmenu - $HOME/dmenu/config.h"
+"bookmarks - $HOME/.config/bookmarks/bookmarks.txt"
+"lf - $HOME/.config/lf/lfrc"
+"spotifyd - $HOME/.config/spotifyd/spotifyd.conf"
 "quit"
 )
 
@@ -25,7 +28,7 @@ if [[ "$choice" == "quit" ]]; then
 
 elif [ "$choice" ]; then 
   cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}' )
- /Applications/Alacritty.app/Contents/MacOS/alacritty -t "${TITLE}" -e "$EDITOR" "$cfg"
+ /Applications/Alacritty.app/Contents/MacOS/alacritty -t "${TITLE}"  -e "$EDITOR" "$cfg"
 
 else 
   echo "Program Terminated"

@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 window:
   decorations: buttonless
-  opacity: 0.90
+  opacity: 0.65
   padding:
     x: 5
     y: 15
@@ -18,16 +18,21 @@ scrolling:
 
 font:
   normal:
-      #family: CozetteVector
-      #style: Regular
-      family: Iosevka Nerd Font
-      style: Bold
-  size: 19
+    #family: CozetteVector
+    #style: Regular
+    family: Iosevka Nerd Font
+    style: Bold
+  #size: 19
+  size: 22
+  bold:
+    family: Iosevka Nerd Font
+    style: Medium Italic
 
 ## Nord ###
 colors:
   primary:
-    background: '#2e3440'
+    #background: '#2e3440'
+    background: '#000000'
     foreground: '#d8dee9'
     dim_foreground: '#a5abb6'
   cursor:

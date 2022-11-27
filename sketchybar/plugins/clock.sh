@@ -2,4 +2,5 @@
 #sketchybar --set $NAME label="$(date '+|   %H:%M:%S |   %m/%d/%y (%a) | ')"
 
 #sketchybar --set $NAME label="$(date '+ (%a) %m/%d |  %H:%M:%S |')"
-sketchybar --set $NAME label="$(date '+%H:%M ')"
+#sketchybar --set $NAME label="$(date '+%H:%M %p')"
+sketchybar --set $NAME label="$(date '+%I:%M %p')"

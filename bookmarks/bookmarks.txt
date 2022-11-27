@@ -1,5 +1,4 @@
 ﴬ notes
- editbookmarks
  editdmenu
 restartyabai
 sketchybar
@@ -25,13 +24,13 @@ https://www.goodreads.com/user/show/88361217-james-scholz
 https://drive.google.com/drive/u/0/my-drive
 https://www.reddit.com/
 https://pomofocus.io/
-https://www.reddit.com/r/unixporn/comments/xpnwf0/oc_dmenu_as_a_daily_driver_app_launcher_for_macos/
 https://www.reddit.com/r/suckless/comments/nu8by3/dmenu_on_mac_os/
 https://www.youtube.com/
-https://www.artstation.com/nikojyp #beautiful landscape wallpapers
-https://www.artstation.com/refriedspinach #futuristic art 
 https://www.nordtheme.com/docs/colors-and-palettes
-https://github.com/FelixKratz/SketchyBar/discussions/12
-https://felixkratz.github.io/SketchyBar/config/bar
-https://www.facebook.com/
-https://github.com/zegervdv/homebrew-zathura
+https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index
+https://csa.schoology.com/course/6023316801/materials
+https://github.com/oatmeaI/dotfiles #this stuff lookin kinda nicely riced
+https://scholar.google.com/
+https://jonathanchang.org/blog/setting-up-spotifyd-on-macos/
+https://www.reddit.com/r/unixporn/
+https://github.com/SirCharlieMars/dotfiles/tree/master/latex_template

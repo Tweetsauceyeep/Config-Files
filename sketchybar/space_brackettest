@@ -1,0 +1,18 @@
+ITEMS=$(sketchybar --query bar | jq -r '.items | .[]')
+
+LEFT_ITEMS=()
+for item in $ITEMS
+do
+  if echo "$item" | grep -q 'space'; then
+    LEFT_ITEMS+=(${item})
+  fi
+done
+
+sketchybar --add bracket left_items ${LEFT_ITEMS[@]} \
+           --set         left_items      background.color="$BACKGROUND_COLOR"   \
+                                         background.corner_radius="$ROUNDED_CORNERS"   \
+                                         background.height="$BACKGROUND_HEIGHT"         \
+                                         background.border_color="$BACKGROUND_BORDER_COLOR" \
+                                         background.border_width=2                      \
+
+

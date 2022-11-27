@@ -21,7 +21,7 @@ elif echo "$bookmark" | grep -q 'sketchybar'; then
   brew services restart sketchybar
 else 
   echo "$bookmark" | pbcopy
-  echo "copied!"
+  echo "copied!" | terminal-notifier -sound default
 fi
 
 

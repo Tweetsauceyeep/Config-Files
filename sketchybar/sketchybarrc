@@ -4,9 +4,11 @@
 # https://github.com/FelixKratz/dotfiles
 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
-BACKGROUND_COLOR="0xff2E3440"
-BACKGROUND_HEIGHT=27
-ROUNDED_CORNERS=12
+#BACKGROUND_COLOR="0xff2E3440"
+BACKGROUND_COLOR="0xff4C566A"
+BACKGROUND_BORDER_COLOR="0xff81A1C1"
+BACKGROUND_HEIGHT=28
+ROUNDED_CORNERS=8
 
 
 ##### Bar Appearance #####
@@ -19,15 +21,20 @@ ROUNDED_CORNERS=12
 #color=0x15ffffff
 #blur_radius=80    
 ##y_offset=5       \
+                 #padding_right=16  \
 
-sketchybar --bar height=35         \
+sketchybar --bar height=37         \
                  position=top\
                  sticky=off        \
-                 padding_left=25   \
+                 padding_left=24   \
                  padding_right=16  \
                  topmost=off        \
-                 blur_radius=5     \
-                 color=0x662E3440   \
+                 blur_radius=15     \
+                 color=0xcc2E3440   \
+                 margin=15 \
+                 y_offset=5 \
+                 corner_radius=20 \
+                 
 
 
 ##### Changing Defaults #####
@@ -39,14 +46,15 @@ sketchybar --default updates=when_shown                    \
                      drawing=on                            \
                      icon.font="Hack Nerd Font:Bold:17.0"  \
                      icon.color=0xffffffff                 \
-                     label.font="Hack Nerd Font:Bold:15.0" \
+                     label.font="Hack Nerd Font:Bold:13.5" \
                      label.color=0xffffffff                \
                      label.padding_left=4                  \
                      label.padding_right=4                 \
                      icon.padding_left=4                   \
-                     icon.padding_right=4
-                     background.padding_right=4 \
-                     background.padding_left=4 \
+                     icon.padding_right=4                  \
+                     background.padding_right=0            \
+                     background.padding_left=0             \
+                     background.border_width=2            \
 
 
 SPACE_ICONS=("" "1" "2" "3" "4" "5" "6" "7")
@@ -56,23 +64,23 @@ do
   sketchybar --add space      space.$sid left                    \
              --set space.$sid associated_space=$sid              \
                               icon=${SPACE_ICONS[i]}             \
+                              background.height="$BACKGROUND_HEIGHT" \
+                              background.corner_radius="$ROUNDED_CORNERS"         \
+                              background.color="$BACKGROUND_COLOR"        \
                               icon.padding_left=20               \
                               icon.padding_right=20              \
                               icon.highlight_color=0xff88C0D0    \
                               background.padding_left=-10         \
-                              background.padding_right=-8        \
-                              background.height="$BACKGROUND_HEIGHT"               \
-                              background.corner_radius=12         \
-                              background.color="$BACKGROUND_COLOR"        \
+                              background.padding_right=-10        \
                               background.drawing=on              \
                               label.drawing=off                  \
-                              click_script="$SPACE_CLICK_SCRIPT"
-done
+                              click_script="$SPACE_CLICK_SCRIPT" 
+done                                                           
+
 
 ###### Adding Center Shit ######
 SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 POPUP_SCRIPT="sketchybar -m --set \$NAME popup.drawing=toggle"
-                                       #label.padding_left=20                  \
 
 sketchybar --add       event           spotify_change $SPOTIFY_EVENT      \
            --add       item            spotify.name center                \
@@ -80,7 +88,7 @@ sketchybar --add       event           spotify_change $SPOTIFY_EVENT      \
                                        icon=                             \
                                        icon.color=0xff1DB954              \
                                        icon.padding_left=20                \
-                                       icon.padding_right=5               \
+                                       icon.padding_right=20               \
                                        popup.horizontal=on                \
                                        popup.align=center                 \
                                        popup.background.border_width=2   \
@@ -88,7 +96,8 @@ sketchybar --add       event           spotify_change $SPOTIFY_EVENT      \
                                        popup.background.border_color=0xff9dd274  \
                                        popup.background.color=0xff9dd274  \
                                        label.padding_right=20                 \
-                                       icon.drawing=on                   \
+                                       label.padding_left=20                 \
+                                       icon.drawing=off                   \
                                                                           \
            --add       item            spotify.back popup.spotify.name    \
            --set       spotify.back    icon=                             \
@@ -174,6 +183,7 @@ sketchybar --add item date right                        \
                          icon.padding_left=12            \
                          label.padding_right=12                 \
                          background.padding_right=10       \
+                         background.padding_left=10       \
 
 #### ADDING BRACKETS 
 
@@ -181,25 +191,47 @@ sketchybar --add bracket center_items   spotify.name center \
            --set         center_items   background.color="$BACKGROUND_COLOR"   \
                                         background.corner_radius="$ROUNDED_CORNERS"   \
                                         background.height="$BACKGROUND_HEIGHT"          \
+                                        background.border_color="$BACKGROUND_BORDER_COLOR" \
 
 sketchybar --add bracket right_side     clock                         \
-                                                                      \
            --set         right_side     background.color="$BACKGROUND_COLOR"   \
                                         background.corner_radius="$ROUNDED_CORNERS"   \
                                         background.height="$BACKGROUND_HEIGHT"          \
+                                        background.border_color="$BACKGROUND_BORDER_COLOR" \
                                                                       \  
-sketchybar --add bracket date                                         \
-                                                                      \
-           --set         date           background.color="$BACKGROUND_COLOR"   \
+sketchybar --add bracket date_shit      date                              \
+           --set         date_shit      background.color="$BACKGROUND_COLOR"   \
                                         background.corner_radius="$ROUNDED_CORNERS"   \
                                         background.height="$BACKGROUND_HEIGHT"          \
+                                        background.border_color="$BACKGROUND_BORDER_COLOR" \
                                                                       \
 sketchybar --add bracket power_volume    battery                      \
                                          sound                        \
            --set         power_volume    background.color="$BACKGROUND_COLOR"   \
                                          background.corner_radius="$ROUNDED_CORNERS"   \
                                          background.height="$BACKGROUND_HEIGHT"         \
+                                         background.border_color="$BACKGROUND_BORDER_COLOR" \
                                          
+
+
+ITEMS=$(sketchybar --query bar | jq -r '.items | .[]')
+
+LEFT_ITEMS=()
+for item in $ITEMS
+do
+  if echo "$item" | grep -q 'space'; then
+    LEFT_ITEMS+=(${item})
+  fi
+done
+
+sketchybar --add bracket left_items ${LEFT_ITEMS[@]} \
+
+skethybar --add bracket brother left_items \
+           --set         brother         background.color="$BACKGROUND_COLOR"   \
+                                         background.corner_radius="$ROUNDED_CORNERS"   \
+                                         background.height="$BACKGROUND_HEIGHT"         \
+                                         background.border_color="$BACKGROUND_BORDER_COLOR" \
+
 
 
 
@@ -207,6 +239,8 @@ sketchybar --add bracket power_volume    battery                      \
 # The below command is only needed at the end of the initial configuration and
 # should never be run in an item script.
 
+
+
 sketchybar --update
 
-occho "sketchybar configuration loaded.."
+echo "sketchybar configuration loaded.."

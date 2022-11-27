@@ -119,7 +119,7 @@ inoremap <C-p> <Esc>/<++><Enter>"_c4l
 
 "========== PLUGINS ============
 call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release','for': ['javascript', 'html', 'json', 'python','text', 'shell', 'bash']}
+Plug 'neoclide/coc.nvim', {'branch': 'release','for': ['javascript', 'html', 'json', 'python','markdown', 'shell', 'bash', 'tex']}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
 Plug 'prettier/vim-prettier', {
@@ -127,11 +127,12 @@ Plug 'prettier/vim-prettier', {
   \ 'branch': 'release/0.x',
   \ 'for': 'javascript'
   \ }
-Plug 'lervag/vimtex', {'for': 'latex'}
-Plug 'sirver/ultisnips', {'for': ['javascript', 'latex', 'html', 'python']}
+Plug 'lervag/vimtex', {'for': ['tex', 'markdown']}
+Plug 'sirver/ultisnips', {'for': ['javascript', 'tex', 'html', 'python']}
 Plug 'vimwiki/vimwiki', {'for': 'markdown'}
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
 Plug 'alvan/vim-closetag', {'for': ['javascript', 'html']}
+Plug 'junegunn/goyo.vim', {'for': ['markdown', 'tex']}
 call plug#end()
 syntax on
 "close tag
@@ -185,9 +186,15 @@ nmap <silent> gr <Plug>(coc-references)
 "+++++++++ VIM WIKI ++++++++++++++++++++
 let g:vimwiki_list = [{'path': '~/Obsidian-Notes/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_list = [{'path': '!/'}]
 
 "++++++++++++++++++ VIM MARKDOWN PREVIEW +++++++++++++++++=
 
 nnoremap <leader>m :MarkdownPreviewToggle<CR>
+" set to 1, nvim will open the preview window after entering the markdown buffer
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_close = 1
 
+
+"+++++++++++++++ VIMTEX
+let g:vimtex_view_method = 'skim'
+let g:vimtex_compiler_method = 'latexmk'
