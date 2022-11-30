@@ -4,14 +4,11 @@
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty     # open a terminal
 cmd + alt - e : /Applications/Alacritty.app/Contents/MacOS/alacritty -e lf                                                # open finder
 cmd + alt - o : open -a obsidian
-cmd + alt - q : open $HOME/Wallpapers
+cmd + alt - d : open $HOME/Wallpapers
 cmd + alt - s : /Applications/Alacritty.app/Contents/MacOS/alacritty -e spt                                                # open finder
-# app launcher
-# pdf finder
-# app related
+cmd + alt - p : open $HOME/.config/math/latexcheatsheet.pdf
+hyper - w : open -a "Brave Browser"
 
-# popup file browser
-ctrl - p : ~/scripts/filebrowser.sh
 # DMENU
 #ctrl - b : ~/.config/scripts/popup.sh .config/scripts/bookmarks.sh
 ctrl - b : ~/.config/scripts/bookmarks.sh

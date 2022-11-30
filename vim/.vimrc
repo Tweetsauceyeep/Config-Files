@@ -65,6 +65,7 @@ map <C-w>k ;wincmd k<CR>
 map <C-w>l ;wincmd l<CR>
 nmap <silent> fk ;ter<CR>
 map <leader>p ;Prettier<CR> 
+map <leader>n ;VimtexCompile<CR> 
 "swaps ; and : This is why shit looks like ;syntax off
 noremap ; :
 noremap : ;
@@ -96,6 +97,7 @@ let g:currentmode={
 set statusline=
 set statusline+=%2*\ %{toupper(g:currentmode[mode()])}
 set statusline+=%4*\ %t\ \                                
+set statusline+=%4*\ \ \                                
 
 " ============================================
 " Stuff for like doing things that plugins do without plugins
@@ -134,7 +136,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'alvan/vim-closetag', {'for': ['javascript', 'html']}
 Plug 'junegunn/goyo.vim', {'for': ['markdown', 'tex']}
 call plug#end()
-syntax on
+syntax off
 "close tag
 let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 " =================== FZF ================
@@ -193,8 +195,3 @@ nnoremap <leader>m :MarkdownPreviewToggle<CR>
 " set to 1, nvim will open the preview window after entering the markdown buffer
 let g:mkdp_auto_start = 0
 let g:mkdp_auto_close = 1
-
-
-"+++++++++++++++ VIMTEX
-let g:vimtex_view_method = 'skim'
-let g:vimtex_compiler_method = 'latexmk'

@@ -21,9 +21,9 @@ elif echo "$bookmark" | grep -q 'sketchybar'; then
   brew services restart sketchybar
 else 
   echo "$bookmark" | pbcopy
-  echo "copied!" | terminal-notifier -sound default
 fi
 
+yabai -m window --focus recent
 
 
 #elif echo "$bookmark" | grep -q 'apps'; then

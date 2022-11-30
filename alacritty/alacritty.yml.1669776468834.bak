@@ -65,4 +65,4 @@ colors:
 
 key_bindings:
   - { key: N, mods: Command, action: SpawnNewInstance }
-theme: Gruvbox-Dark
+theme: Nord

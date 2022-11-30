@@ -24,6 +24,7 @@ open -a Xquartz
 choice=$(printf '%s\n' "${options[@]}" | sort | dmenu -l '15' -p  'config:')
 
 if [[ "$choice" == "quit" ]]; then
+  yabai -m display --focus recent
   echo "Program Terminated" && exit 1
 
 elif [ "$choice" ]; then 
