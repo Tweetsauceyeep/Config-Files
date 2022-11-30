@@ -20,7 +20,7 @@ export FZF_DEFAULT_OPTS='-m --height 50%'
 #(set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
 #end
 
-
+alias ll ".config/bin/exa-macos-x86_64-v0.10.0/bin/exa -l -g --icons"
 
 function gacp
   git add . && git commit -m "$argv"
@@ -31,3 +31,7 @@ function cds
   cd $(find . -type d -maxdepth 4 | fzf)
 end
 
+function fish_mode_prompt; end
+ function fish_right_prompt
+  #intentionally left blank
+ end

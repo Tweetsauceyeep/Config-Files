@@ -26,8 +26,9 @@ yabai -m config window_border_width          7
 yabai -m config window_placement             second_child
 #yabai -m config active_window_border_color   0xff88C0D0 #nord light blue
 #yabai -m config active_window_border_color   0xff83a598 #gruv blue
-yabai -m config active_window_border_color   0xff98971a #gruv greenish
+#yabai -m config active_window_border_color   0xff98971a #gruv greenish
 #yabai -m config active_window_border_color   0xffECEFF4
+yabai -m config active_window_border_color   0xff689d6a #gruv aqua
 #yabai -m config normal_window_border_color   0xff88C0D0
 yabai -m config normal_window_border_color   0x00ffffff
 yabai -m config window_animation_duration 0.35
