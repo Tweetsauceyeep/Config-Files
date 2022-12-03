@@ -39,3 +39,9 @@ https://www.youtube.com/watch?v=9Bps8vkQ28g #nice loooking rice
 https://www.reddit.com/user/jvscholz/?sort=top
 https://gitlab.com/exorcist365/wallpapers/-/blob/master/nord-shards.jpg
 https://gruvbox-wallpapers.onrender.com/
+https://github.com/Tweetsauceyeep/gruv-startpage
+https://fishshell.com/docs/current/interactive.html#variables-color
+https://docs.google.com/document/u/0/?tgif=d
+https://www.reddit.com/r/vim/comments/gc05k1/why_are_colorschemes_so_slow_to_load/
+https://github.com/romainl/vim-rnb
+https://github.com/lifepillar/vim-gruvbox8

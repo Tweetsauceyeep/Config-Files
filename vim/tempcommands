@@ -1,0 +1,6 @@
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+for coc    
+
+,'for': ['javascript', 'html', 'json', 'python','markdown', 'shell', 'bash', 'tex']

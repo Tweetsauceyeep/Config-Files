@@ -15,5 +15,6 @@
     "coc-tsserver": ">=2.0.2"
   },
   "disabled": [],
-  "locked": []
+  "locked": [],
+  "lastUpdate": 1669867744333
 }

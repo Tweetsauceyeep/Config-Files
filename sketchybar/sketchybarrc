@@ -1,3 +1,4 @@
+############### GRUV BAR #########################
 # This is a demo config to show some of the most important commands more easily.
 # This is meant to be changed and configured, as it is intentionally kept sparse.
 # For a more advanced configuration example see my dotfiles:
@@ -5,10 +6,15 @@
 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 #BACKGROUND_COLOR="0xff2E3440"
-BACKGROUND_COLOR="0xff4C566A"
-BACKGROUND_BORDER_COLOR="0xff81A1C1"
+BACKGROUND_COLOR="0xff282828"
+BACKGROUND_BORDER_COLOR="0xff689d6a"
 BACKGROUND_HEIGHT=28
 ROUNDED_CORNERS=8
+BAR_COLOR="0xff202020"
+BLUE="0xff458588"
+RED="0xfffb4934"
+GREEN="0xffb8bb26"
+YELLOW="0xfffabd2f"
 
 
 ##### Bar Appearance #####
@@ -23,17 +29,13 @@ ROUNDED_CORNERS=8
 ##y_offset=5       \
                  #padding_right=16  \
 
-sketchybar --bar height=37         \
-                 position=top\
+sketchybar --bar height=35         \
+                 position=bottom\
                  sticky=off        \
                  padding_left=24   \
                  padding_right=16  \
                  topmost=off        \
-                 blur_radius=15     \
-                 color=0xcc2E3440   \
-                 margin=15 \
-                 y_offset=5 \
-                 corner_radius=20 \
+                 color=$BAR_COLOR  \
                  
 
 
@@ -44,7 +46,7 @@ sketchybar --bar height=37         \
 
 sketchybar --default updates=when_shown                    \
                      drawing=on                            \
-                     icon.font="Hack Nerd Font:Bold:17.0"  \
+                     icon.font="Hack Nerd Font:Bold:20.0"  \
                      icon.color=0xffffffff                 \
                      label.font="Hack Nerd Font:Bold:13.5" \
                      label.color=0xffffffff                \
@@ -69,7 +71,7 @@ do
                               background.color="$BACKGROUND_COLOR"        \
                               icon.padding_left=20               \
                               icon.padding_right=20              \
-                              icon.highlight_color=0xff88C0D0    \
+                              icon.highlight_color=$BLUE    \
                               background.padding_left=-10         \
                               background.padding_right=-10        \
                               background.drawing=on              \
@@ -153,25 +155,26 @@ sketchybar --add       event           spotify_change $SPOTIFY_EVENT      \
 sketchybar --add item battery right                      \
            --set battery script="$PLUGIN_DIR/power.sh"   \
                          update_freq=10                  \
-                         icon.color=0xffEBCB8B           \
-                         label.padding_left=0                  \
-                         label.padding_right=10                 \
+                         icon.color=$YELLOW           \
+                         label.padding_left=5                  \
+                         label.padding_right=5                 \
            --subscribe battery system_woke               \
                                                          \
                                                           \
 sketchybar --add item sound right                         \
               --set sound  update_freq=5                      \
                          script="~/.config/sketchybar/plugins/volume.sh" \
-                         icon.color=0xff88C0D0          \
-                         icon.padding_left=10                  \
+                         icon.color=$BLUE          \
+                         icon.padding_left=5                  \
+                         label.padding_right=5                 \
                                                               \
 sketchybar --add item clock right                        \
            --set clock   update_freq=10                  \
                          script="$PLUGIN_DIR/clock.sh"   \
                          icon=                          \
-                         icon.color=0xffA3BE8C          \
-                         icon.padding_left=12            \
-                         label.padding_right=12                 \
+                         icon.color=$GREEN          \
+                         icon.padding_left=5            \
+                         label.padding_right=5                 \
                          background.padding_right=10       \
                                                          \
 sketchybar --add item date right                        \
@@ -179,59 +182,11 @@ sketchybar --add item date right                        \
                          script="$PLUGIN_DIR/date.sh"   \
                          click_script="open https://calendar.google.com/calendar/u/0/r"       \
                          icon=                         \
-                         icon.color=0xffBF616A          \
-                         icon.padding_left=12            \
-                         label.padding_right=12                 \
+                         icon.color=$RED          \
+                         icon.padding_left=5           \
+                         label.padding_right=5                 \
                          background.padding_right=10       \
                          background.padding_left=10       \
-
-#### ADDING BRACKETS 
-
-sketchybar --add bracket center_items   spotify.name center \
-           --set         center_items   background.color="$BACKGROUND_COLOR"   \
-                                        background.corner_radius="$ROUNDED_CORNERS"   \
-                                        background.height="$BACKGROUND_HEIGHT"          \
-                                        background.border_color="$BACKGROUND_BORDER_COLOR" \
-
-sketchybar --add bracket right_side     clock                         \
-           --set         right_side     background.color="$BACKGROUND_COLOR"   \
-                                        background.corner_radius="$ROUNDED_CORNERS"   \
-                                        background.height="$BACKGROUND_HEIGHT"          \
-                                        background.border_color="$BACKGROUND_BORDER_COLOR" \
-                                                                      \  
-sketchybar --add bracket date_shit      date                              \
-           --set         date_shit      background.color="$BACKGROUND_COLOR"   \
-                                        background.corner_radius="$ROUNDED_CORNERS"   \
-                                        background.height="$BACKGROUND_HEIGHT"          \
-                                        background.border_color="$BACKGROUND_BORDER_COLOR" \
-                                                                      \
-sketchybar --add bracket power_volume    battery                      \
-                                         sound                        \
-           --set         power_volume    background.color="$BACKGROUND_COLOR"   \
-                                         background.corner_radius="$ROUNDED_CORNERS"   \
-                                         background.height="$BACKGROUND_HEIGHT"         \
-                                         background.border_color="$BACKGROUND_BORDER_COLOR" \
-                                         
-
-
-ITEMS=$(sketchybar --query bar | jq -r '.items | .[]')
-
-LEFT_ITEMS=()
-for item in $ITEMS
-do
-  if echo "$item" | grep -q 'space'; then
-    LEFT_ITEMS+=(${item})
-  fi
-done
-
-sketchybar --add bracket left_items ${LEFT_ITEMS[@]} \
-
-skethybar --add bracket brother left_items \
-           --set         brother         background.color="$BACKGROUND_COLOR"   \
-                                         background.corner_radius="$ROUNDED_CORNERS"   \
-                                         background.height="$BACKGROUND_HEIGHT"         \
-                                         background.border_color="$BACKGROUND_BORDER_COLOR" \
-
 
 
 

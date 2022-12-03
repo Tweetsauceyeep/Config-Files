@@ -1,7 +1,6 @@
 #!/bin/bash
 
-open -a Xquartz
-emoji=$(cat $HOME/.config/bookmarks/emojis.txt | dmenu -l 20)
+emoji=$(cat $HOME/.config/bookmarks/emoji-list.txt | fzf)
 
-echo $emoji | awk '{print $NF}' | sed  's/ *$//' | pbcopy 
+echo $emoji | awk '{print $1}' | sed  's/ *$//' | pbcopy 
 terminal-notifier -message "copied!"

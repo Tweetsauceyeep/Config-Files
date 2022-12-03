@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-EDITOR="VIM"
+EDITOR="vim"
 TITLE="configterm"
 
 declare -a options=(
@@ -29,7 +29,8 @@ if [[ "$choice" == "quit" ]]; then
 
 elif [ "$choice" ]; then 
   cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}' )
- /Applications/Alacritty.app/Contents/MacOS/alacritty -t "${TITLE}"  -e "$EDITOR" "$cfg"
+ #/Applications/Alacritty.app/Contents/MacOS/alacritty -t "${TITLE}" -e  "$EDITOR" "$cfg"
+ /Applications/Alacritty.app/Contents/MacOS/alacritty -t "${TITLE}" -e "$EDITOR" "$cfg"
 
 else 
   echo "Program Terminated"

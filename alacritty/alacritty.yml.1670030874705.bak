@@ -1,0 +1,65 @@
+env:
+  TERM: xterm-256color
+window:
+  decorations: buttonless
+    #opacity: 1
+  opacity: 0.75
+  padding:
+    x: 5
+    y: 15
+  class:
+    instance: Alacritty
+    general: Alacritty
+  scrolling:
+    history: 5000
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    #family: CozetteVector
+    #style: Regular
+    family: CaskaydiaCove Nerd Font
+    style: Regular
+  #size: 19
+  size: 19
+  bold:
+    family: CaskaydiaCove Nerd Font
+    style: Bold
+  italic:
+    family: CaskaydiaCove Nerd Font
+    style: Light Italic
+
+key_bindings:
+  - { key: N, mods: Command, action: SpawnNewInstance }
+
+theme: Kitty
+colors:
+  # Default colors
+  primary:
+    background: '#000000'
+    foreground: '#dddddd'
+
+  # Normal colors
+  normal:
+    black: '#000000'
+    red: '#cc0403'
+    green: '#19cb00'
+    yellow: '#cecb00'
+    blue: '#0d73cc'
+    magenta: '#cb1ed1'
+    cyan: '#0dcdcd'
+    white: '#dddddd'
+
+  # Bright colors
+  bright:
+    black: '#767676'
+    red: '#f2201f'
+    green: '#23fd00'
+    yellow: '#fffd00'
+    blue: '#1a8fff'
+    magenta: '#fd28ff'
+    cyan: '#14ffff'
+    white: '#ffffff'

@@ -17,8 +17,10 @@
 # global settings
 
 yabai -m config window_shadow                off
+yabai -m config window_shadow float
 yabai -m config window_opacity               on
-yabai -m config window_opacity_duration      0.065
+#yabai -m config window_opacity_duration      0.065
+yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1
 yabai -m config normal_window_opacity        0.88
 yabai -m config window_border                on
@@ -29,8 +31,7 @@ yabai -m config window_placement             second_child
 #yabai -m config active_window_border_color   0xff98971a #gruv greenish
 #yabai -m config active_window_border_color   0xffECEFF4
 yabai -m config active_window_border_color   0xff689d6a #gruv aqua
-#yabai -m config normal_window_border_color   0xff88C0D0
-yabai -m config normal_window_border_color   0x00ffffff
+yabai -m config normal_window_border_color   0xaa282828
 yabai -m config window_animation_duration 0.35
 yabai -m config insert_feedback_color        0xffd75f5f
 
@@ -73,7 +74,7 @@ yabai -m rule --add app="^Brave Browser$" space=3
 # assigning apps to spaces yahhh
 yabai -m space 4 --label code #desktop 3
 yabai -m config --space code top_padding 0
-yabai -m config --space code bottom_padding 0
+yabai -m config --space code bottom_padding 35
 yabai -m config --space code left_padding 0
 yabai -m config --space code right_padding 0
 yabai -m config --space code window_gap 0
@@ -92,8 +93,8 @@ yabai -m config layout                       bsp
 
 yabai -m config left_padding                 60
 yabai -m config right_padding                60
-yabai -m config top_padding                  40
-yabai -m config bottom_padding               40
+yabai -m config top_padding                  20
+yabai -m config bottom_padding               60
 yabai -m config window_gap                   20
 # if status bar is on the bottom then the value should be 50
 #yabai -m config external_bar main:20:65 #if bar is the transparent rounded one
