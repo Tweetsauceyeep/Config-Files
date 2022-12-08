@@ -1,8 +1,5 @@
-ﴬ notes
- editdmenu
 restartyabai
 sketchybar
-xquartz
 https://castel.dev/post/lecture-notes-1/ #vim and latex
 https://csa.schoology.com/home
 https://github.com/
@@ -37,11 +34,13 @@ https://github.com/SirCharlieMars/dotfiles/tree/master/latex_template
 https://www.youtube.com/playlist?list=PL-p5XmQHB_JSQvW8_mhBdcwEyxdVX0c1T #latex stuff
 https://www.youtube.com/watch?v=9Bps8vkQ28g #nice loooking rice
 https://www.reddit.com/user/jvscholz/?sort=top
-https://gitlab.com/exorcist365/wallpapers/-/blob/master/nord-shards.jpg
-https://gruvbox-wallpapers.onrender.com/
-https://github.com/Tweetsauceyeep/gruv-startpage
-https://fishshell.com/docs/current/interactive.html#variables-color
 https://docs.google.com/document/u/0/?tgif=d
-https://www.reddit.com/r/vim/comments/gc05k1/why_are_colorschemes_so_slow_to_load/
 https://github.com/romainl/vim-rnb
 https://github.com/lifepillar/vim-gruvbox8
+https://www.quantum-bits.org/?p=2897 # on retro computing on macos
+https://osxdaily.com/category/retro/
+https://trailofbits.github.io/ctf/intro/find.html
+https://d12frosted.io/posts/2022-04-23-yabai-spaces.html #automatic organization of yabai windwos
+https://stackoverflow.com/questions/16082991/vim-switching-between-files-rapidly-using-vanilla-vim-no-plugins/16084326#16084326
+https://www.youtube.com/watch?v=i1DyGlidnR4 #making an iphone usable in 2021!!!
+https://monkeytype.com/

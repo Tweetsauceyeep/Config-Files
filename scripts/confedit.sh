@@ -13,7 +13,7 @@ declare -a options=(
 "sketchybar - $HOME/.config/sketchybar/sketchybarrc"
 "scripts - $HOME/.config/scripts"
 "spotifytui - $HOME/.config/spotify-tui/config.yml"
-"dmenu - $HOME/dmenu/config.h"
+"dmenu - $HOME/Programming/bin/dmenu/config.h"
 "bookmarks - $HOME/.config/bookmarks/bookmarks.txt"
 "lf - $HOME/.config/lf/lfrc"
 "spotifyd - $HOME/.config/spotifyd/spotifyd.conf"

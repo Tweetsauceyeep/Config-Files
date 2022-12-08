@@ -1,5 +1,4 @@
 #!/bin/bash
 
-
-cd $HOME/Obsidian-Notes
+cd $HOME/Notes/Obsidian-Notes
 vim index.md

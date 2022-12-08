@@ -16,7 +16,7 @@
 # My custom space names for my 3 monitor setup. These names are used in some of my scripts.
 # global settings
 
-yabai -m config window_shadow                off
+yabai -m config window_shadow                on
 yabai -m config window_shadow float
 yabai -m config window_opacity               on
 #yabai -m config window_opacity_duration      0.065
@@ -24,13 +24,13 @@ yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1
 yabai -m config normal_window_opacity        0.88
 yabai -m config window_border                on
-yabai -m config window_border_width          7
+yabai -m config window_border_width          6
 yabai -m config window_placement             second_child
 #yabai -m config active_window_border_color   0xff88C0D0 #nord light blue
+yabai -m config active_window_border_color   0xff458588
 #yabai -m config active_window_border_color   0xff83a598 #gruv blue
 #yabai -m config active_window_border_color   0xff98971a #gruv greenish
-#yabai -m config active_window_border_color   0xffECEFF4
-yabai -m config active_window_border_color   0xff689d6a #gruv aqua
+#yabai -m config active_window_border_color   0xff689d6b #gruv aqua
 yabai -m config normal_window_border_color   0xaa282828
 yabai -m config window_animation_duration 0.35
 yabai -m config insert_feedback_color        0xffd75f5f
@@ -40,7 +40,7 @@ yabai -m config mouse_modifier cmd
 yabai -m config mouse_action1              resize
 yabai -m config mouse_action2              move
 yabai -m config mouse_drop_action          swap
-yabai -m config focus_follows_mouse       autoraise
+#yabai -m config focus_follows_mouse       autoraise
 
 
 yabai -m space 1 --label one
@@ -72,12 +72,13 @@ yabai -m rule --add app="^Alacritty$"
 yabai -m rule --add app="^Brave Browser$" space=3
  
 # assigning apps to spaces yahhh
-yabai -m space 4 --label code #desktop 3
-yabai -m config --space code top_padding 0
-yabai -m config --space code bottom_padding 35
-yabai -m config --space code left_padding 0
-yabai -m config --space code right_padding 0
-yabai -m config --space code window_gap 0
+#yabai -m space 4 --label code #desktop 3
+#yabai -m config --space code top_padding 0
+##yabai -m config --space code bottom_padding 35
+#yabai -m config --space code bottom_padding 0
+#yabai -m config --space code left_padding 0
+#yabai -m config --space code right_padding 0
+#yabai -m config --space code window_gap 0
 
 # Launcher terminal
 yabai -m rule --add title="popuplauncher" manage=off sticky=on layer=above border=off
@@ -91,11 +92,11 @@ yabai -m config layout                       bsp
 #yabai -m config right_padding                12
 #yabai -m config window_gap                   6
 
-yabai -m config left_padding                 60
-yabai -m config right_padding                60
+yabai -m config left_padding                 25
+yabai -m config right_padding                25
 yabai -m config top_padding                  20
-yabai -m config bottom_padding               60
-yabai -m config window_gap                   20
+yabai -m config bottom_padding               20
+yabai -m config window_gap                   10
 # if status bar is on the bottom then the value should be 50
 #yabai -m config external_bar main:20:65 #if bar is the transparent rounded one
 #
@@ -107,5 +108,3 @@ yabai -m config window_gap                   20
 
 
 echo "yabai configuration loaded.. mybro"
-
-

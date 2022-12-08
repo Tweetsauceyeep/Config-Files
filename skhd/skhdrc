@@ -5,7 +5,8 @@ cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty     # open a
 cmd + alt - e : /Applications/Alacritty.app/Contents/MacOS/alacritty -e lf                                                # open finder
 cmd + alt - o : open -a obsidian
 cmd + alt - a : open $HOME/Wallpapers
-cmd + alt - s : /Applications/Alacritty.app/Contents/MacOS/alacritty -e spt                                                # open finder
+cmd + alt - m : /Applications/Alacritty.app/Contents/MacOS/alacritty -e spt                                                # open finder
+cmd + alt - s : open $HOME/pictures/screenshots
 cmd + ctrl - p : open $HOME/.config/math/latexcheatsheet.pdf
 hyper - w : open -a "Brave Browser"
 
@@ -18,15 +19,16 @@ cmd + alt - w : ~/.config/scripts/changewallpaper.sh
 cmd + alt - n :  ~/.config/scripts/pdf-launcher.sh
 cmd + alt - c : /Applications/Alacritty.app/Contents/MacOS/alacritty -e $HOME/.config/scripts/notetaking.sh
 cmd + alt - return : $HOME/.config/scripts/confedit.sh
-cmd + alt - m : $HOME/.config/scripts/popup.sh $HOME/.config/scripts/dmenuemojis.sh
+cmd + alt - p : $HOME/.config/scripts/popup.sh $HOME/.config/scripts/dmenuemojis.sh
 
 ### Yabai stuff ###
 cmd + alt - b : yabai -m window --toggle border                                                            # toggle border for the focused window
 cmd + alt - f : yabai -m window --toggle native-fullscreen                                                   # Toggle parent zoom
 cmd + alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Float/unfloat the focused window
 cmd + alt - t : yabai -m window --toggle float; yabai --trigger window_focus 
-cmd + alt - x : yabai -m config top_padding 0 && yabai -m config bottom_padding 35 && yabai -m config left_padding 0 && yabai -m config right_padding 0; yabai -m config window_gap 1
-cmd + alt - z : yabai -m config top_padding 20; yabai -m config bottom_padding 60; yabai -m config left_padding 60; yabai -m config right_padding 60; yabai -m config window_gap 20
+#cmd + alt - x : yabai -m config top_padding 0 && yabai -m config bottom_padding 0 && yabai -m config left_padding 0 && yabai -m config right_padding 0; yabai -m config window_gap 0
+cmd + alt - x : yabai -m space --toggle padding; yabai -m space --toggle gap
+cmd + alt - z : yabai -m config top_padding 20; yabai -m config bottom_padding 20; yabai -m config left_padding 20; yabai -m config right_padding 20; yabai -m config window_gap 10
 ### Movement ###
 cmd + alt - h : yabai -m window --move rel:-30:0
 cmd + alt - j : yabai -m window --move rel:0:30
@@ -49,18 +51,35 @@ hyper - y : yabai -m config active_window_opacity        0.9
 hyper - n : yabai -m window --space next && yabai -m space --focus next
 hyper - b : yabai -m window --space prev && yabai -m space --focus prev
 
-hyper - s : yabai -m space --focus prev
-hyper - d: yabai -m space --focus next
+# FOCUSING ON NEXT AND PREVIOUS SPACES TURNING OFF FOR HARD MODE
+#hyper - s : yabai -m space --focus prev
+#hyper - d: yabai -m space --focus next
+
 # Move window to previous or next space - AND FOCUS ON IT
 # yabai -m window --space next
 
 ##### SPACE SWITCHER
-hyper - 1 : yabai -m space --focus 2
-hyper - 2 : yabai -m space --focus 3
-hyper - 3 : yabai -m space --focus 4
-hyper - 4 : yabai -m space --focus 5
-hyper - 5 : yabai -m space --focus 6
-hyper - 6 : yabai -m space --focus 7
+alt - 1 : yabai -m space --focus 2
+alt - 2 : yabai -m space --focus 3
+alt - 3 : yabai -m space --focus 4
+alt - 4 : yabai -m space --focus 5
+alt - 5 : yabai -m space --focus 6
+alt - 6 : yabai -m space --focus 7
+alt - 7 : yabai -m space --focus 8
+alt - 8 : yabai -m space --focus 9
+alt - 9 : yabai -m space --focus 10
+
+##### Move to space
+hyper - 1 : yabai -m window --space 2 && yabai -m space --focus 2
+hyper - 2 : yabai -m window --space 3 && yabai -m space --focus 3
+hyper - 3 : yabai -m window --space 4 && yabai -m space --focus 4
+hyper - 4 : yabai -m window --space 5 && yabai -m space --focus 5
+hyper - 5 : yabai -m window --space 6 && yabai -m space --focus 6
+hyper - 6 : yabai -m window --space 7 && yabai -m space --focus 7
+hyper - 7 : yabai -m window --space 8 && yabai -m space --focus 8
+hyper - 8 : yabai -m window --space 9 && yabai -m space --focus 9
+hyper - 9 : yabai -m window --space 10 && yabai -m space --focus 10
+hyper - 0 : yabai -m window --space 11 && yabai -m space --focus 11
 
 # create desktop i hope this works
 hyper - c : yabai -m space --create
@@ -68,8 +87,14 @@ hyper - c : yabai -m space --create
 hyper - x : yabai -m space --destroy
 
 # Focus next window:
-hyper - k : yabai -m window --focus next
-hyper - j : yabai -m window --focus prev
+#hyper - k : yabai -m window --focus next
+#hyper - j : yabai -m window --focus prev
+
+hyper - h : yabai -m window --focus west
+hyper - j : yabai -m window --focus south
+hyper - k : yabai -m window --focus north
+hyper - l : yabai -m window --focus east
+
 
 # Focus next on stack
 
@@ -80,13 +105,13 @@ shift + alt - k : yabai -m window --swap east
 hyper - 0x21 : yabai -m window --swap east # 0x21 is the "[" key
 
 ## increase window size
-hyper - g : yabai -m window --resize left:-20:0
+hyper - i : yabai -m window --resize left:-20:0
 #shift + alt - s : yabai -m window --resize bottom:0:20
 #shift + alt - w : yabai -m window --resize top:0:-20
 #shift + alt - d : yabai -m window --resize right:20:0
 
 ## decrease window size
-hyper - h : yabai -m window --resize left:20:0
+hyper - u : yabai -m window --resize left:20:0
 #shift + cmd - s : yabai -m window --resize bottom:0:-20
 #shift + cmd - w : yabai -m window --resize top:0:20
 shift + cmd - d : yabai -m window --resize right:-20:0

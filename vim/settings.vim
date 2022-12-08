@@ -1,7 +1,11 @@
 
 " ======================== basic settings ==============================
 
+"Always show current position
+"set autochdir changes dr to whatever current file lives
 
+set path=.,**
+set ruler
 set t_ut=
 set ttyfast                " Faster redrawing.
 set lazyredraw             " Only redraw when necessary.

@@ -1,5 +1,13 @@
 let mapleader = " " 
 
+" YUP from here: https://stackoverflow.com/questions/16082991/vim-switching-between-files-rapidly-using-vanilla-vim-no-plugins/16084326#16084326
+nnoremap <leader>b :find *
+nnoremap <leader>s :sfind *
+nnoremap <leader>v :vert sfind *
+nnoremap <leader>t :tabfind *
+
+
+
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
@@ -27,7 +35,6 @@ nnoremap <leader>- :syntax on<CR>
 nnoremap <leader>= :syntax off<CR>
 
 " ============================================
-" Stuff for like doing things that plugins do without plugins
 " Auto-insert closing parenthesis/brace/quotes
 inoremap ( ()<C-G>U<left>
 inoremap { {}<C-G>U<left>
@@ -45,4 +52,6 @@ inoremap <expr> ] getline('.')[col('.') - 1] == "]" ? "\<Right>" : "]"
 " stuff from lukesmith comfy ide vim video
 " This uses <++> as markers
 inoremap <C-p> <Esc>/<++><Enter>"_c4l
+
+
 

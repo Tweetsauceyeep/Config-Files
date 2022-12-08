@@ -1,0 +1,71 @@
+env:
+  TERM: xterm-256color
+window:
+  decorations: buttonless
+  #opacity: 1
+  opacity: 0.75
+  padding:
+    x: 5
+    y: 15
+  class:
+    instance: Alacritty
+    general: Alacritty
+  scrolling:
+    history: 5000
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    #family: CozetteVector
+    #style: Regular
+    #family: Tamzen
+    #style: Medium
+    family: CaskaydiaCove Nerd Font
+    style: Regular
+  #size: 19
+  size: 15
+  bold:
+    family: CaskaydiaCove Nerd Font
+    style: Bold
+  italic:
+    family: CaskaydiaCove Nerd Font
+    style: Light Italic
+
+key_bindings:
+  - { key: N, mods: Command, action: SpawnNewInstance }
+
+theme: github_dark
+colors:
+  # Default colors
+  primary:
+    background: '0x24292e'
+    foreground: '0xd1d5da'
+
+  # Normal colors
+  normal:
+    black: '0x24292e'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xe2e210'
+    blue: '0x3b8eea'
+    magenta: '0xbc3fbc'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  # Bright colors
+  bright:
+    black: '0x666666'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xf5f543'
+    blue: '0x3b8eea'
+    magenta: '0xd670d6'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xf14c4c' }

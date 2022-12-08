@@ -1,6 +1,6 @@
 "========== PLUGINS ============
 call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release','for': ['javascript', 'html', 'json', 'python','markdown', 'shell', 'bash', 'tex']}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
 Plug 'prettier/vim-prettier', {
@@ -8,12 +8,11 @@ Plug 'prettier/vim-prettier', {
   \ 'branch': 'release/0.x',
   \ 'for': 'javascript'
   \ }
-Plug 'lervag/vimtex', {'for': ['tex', 'markdown']}
+"Plug 'lervag/vimtex', {'for': ['tex', 'markdown']}
 Plug 'sirver/ultisnips', {'for': ['javascript', 'tex', 'html', 'python']}
 Plug 'vimwiki/vimwiki', {'for': 'markdown'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
 Plug 'alvan/vim-closetag', {'for': ['javascript', 'html']}
-Plug 'junegunn/goyo.vim', {'for': ['markdown', 'tex']}
 Plug 'lifepillar/vim-gruvbox8'
 call plug#end()
 syntax on
@@ -76,3 +75,7 @@ nnoremap <leader>m :MarkdownPreviewToggle<CR>
 " set to 1, nvim will open the preview window after entering the markdown buffer
 let g:mkdp_auto_start = 0
 let g:mkdp_auto_close = 1
+
+
+" CTRLP
+let g:ctrlp_working_path_mode = 'ra'

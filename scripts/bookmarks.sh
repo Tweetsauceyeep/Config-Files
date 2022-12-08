@@ -7,16 +7,8 @@ bookmark=$(cat ~/.config/bookmarks/bookmarks.txt | dmenu -i -l '15' )
 if echo "$bookmark"  | grep -q 'https:'; then 
   echo "$bookmark" | awk '{print $1}' | xargs -I {} open "{}"
   echo "opened!"
-elif echo "$bookmark" | grep -q 'editbookmarks'; then
-  /Applications/Alacritty.app/Contents/MacOS/alacritty -e vim ~/.config/bookmarks/bookmarks.txt
 elif echo "$bookmark" | grep -q 'restartyabai'; then
   brew services restart yabai && brew services restart skhd
-elif echo "$bookmark" | grep -q 'xquartz'; then
-  open -a XQuartz
-elif echo "$bookmark" | grep -q 'notes'; then
-  /Applications/Alacritty.app/Contents/MacOS/alacritty -e vim Obsidian-Notes/index.md
-elif echo "$bookmark" | grep -q 'editdmenu'; then
-  /Applications/Alacritty.app/Contents/MacOS/alacritty -e vim dmenu/config.h
 elif echo "$bookmark" | grep -q 'sketchybar'; then
   brew services restart sketchybar
 else 
