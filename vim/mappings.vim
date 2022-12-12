@@ -53,5 +53,3 @@ inoremap <expr> ] getline('.')[col('.') - 1] == "]" ? "\<Right>" : "]"
 " This uses <++> as markers
 inoremap <C-p> <Esc>/<++><Enter>"_c4l
 
-
-

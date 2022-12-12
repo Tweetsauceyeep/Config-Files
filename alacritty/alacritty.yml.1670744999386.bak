@@ -2,8 +2,8 @@ env:
   TERM: xterm-256color
 window:
   decorations: buttonless
-  opacity: 1
-    #opacity: 0.80
+    #opacity: 1
+  opacity: 0.80
   padding:
     x: 5
     y: 15
@@ -39,9 +39,6 @@ key_bindings:
 
 theme: Kitty
 colors:
-  cursor:
-    text: '0x000000'
-    cursor: '0xffffff'
   # Default colors
   primary:
     background: '#000000'

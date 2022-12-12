@@ -2,23 +2,23 @@
 
 # opening apps
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty     # open a terminal
-cmd + alt - e : /Applications/Alacritty.app/Contents/MacOS/alacritty -e lf                                                # open finder
+cmd + alt - e : /Applications/Alacritty.app/Contents/MacOS/alacritty -e lf
 cmd + alt - o : open -a obsidian
 cmd + alt - a : open $HOME/Wallpapers
-cmd + alt - m : /Applications/Alacritty.app/Contents/MacOS/alacritty -e spt                                                # open finder
+cmd + alt - m : /Applications/Alacritty.app/Contents/MacOS/alacritty -e spt
 cmd + alt - s : open $HOME/pictures/screenshots
 cmd + ctrl - p : open $HOME/.config/math/latexcheatsheet.pdf
 hyper - w : open -a "Brave Browser"
 
 # DMENU
 #ctrl - b : ~/.config/scripts/popup.sh .config/scripts/bookmarks.sh
-ctrl - b : ~/.config/scripts/bookmarks.sh
+cmd + alt - return : ~/.config/scripts/bookmarks.sh
 ctrl - m : ~/.config/scripts/applauncher.sh
 cmd + alt - v : ~/.config/scripts/addBookmarks.sh
 cmd + alt - w : ~/.config/scripts/changewallpaper.sh
 cmd + alt - n :  ~/.config/scripts/pdf-launcher.sh
 cmd + alt - c : /Applications/Alacritty.app/Contents/MacOS/alacritty -e $HOME/.config/scripts/notetaking.sh
-cmd + alt - return : $HOME/.config/scripts/confedit.sh
+ctrl - b : $HOME/.config/scripts/confedit.sh
 cmd + alt - p : $HOME/.config/scripts/popup.sh $HOME/.config/scripts/dmenuemojis.sh
 
 ### Yabai stuff ###
@@ -84,11 +84,10 @@ hyper - 0 : yabai -m window --space 11 && yabai -m space --focus 11
 # create desktop i hope this works
 hyper - c : yabai -m space --create
 # Delete focused space and focus first space on display
-hyper - x : yabai -m space --destroy
+hyper - x : yabai -m space --focus prev && yabai -m space recent --destroy
 
-# Focus next window:
-#hyper - k : yabai -m window --focus next
-#hyper - j : yabai -m window --focus prev
+# idk man CYCLING THROUGH SPACES
+
 
 hyper - h : yabai -m window --focus west
 hyper - j : yabai -m window --focus south
@@ -96,6 +95,10 @@ hyper - k : yabai -m window --focus north
 hyper - l : yabai -m window --focus east
 
 
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
 # Focus next on stack
 
 ## swap window
@@ -104,21 +107,37 @@ shift + alt - j : yabai -m window --swap west
 shift + alt - k : yabai -m window --swap east
 hyper - 0x21 : yabai -m window --swap east # 0x21 is the "[" key
 
-## increase window size
-hyper - i : yabai -m window --resize left:-20:0
-#shift + alt - s : yabai -m window --resize bottom:0:20
-#shift + alt - w : yabai -m window --resize top:0:-20
-#shift + alt - d : yabai -m window --resize right:20:0
+# Resizing windows
+hyper - u : yabai -m window --resize left:-20:0 ; yabai -m window --resize right:-20:0
+hyper - i : yabai -m window --resize bottom:0:20 ; yabai -m window --resize top:0:20
+hyper - o : yabai -m window --resize top:0:-20 ; yabai -m window --resize bottom:0:-20
+hyper - p : yabai -m window --resize right:20:0 ; yabai -m window --resize left:20:0
 
-## decrease window size
-hyper - u : yabai -m window --resize left:20:0
-#shift + cmd - s : yabai -m window --resize bottom:0:-20
-#shift + cmd - w : yabai -m window --resize top:0:20
-shift + cmd - d : yabai -m window --resize right:-20:0
 
 
 ## rotate tree 90
 hyper - r : yabai -m space --rotate 90
 
 ## toggle window fullscreen zoom
-hyper - p : yabai -m window --toggle zoom-fullscreen
+cmd + alt - p : yabai -m window --toggle zoom-fullscreen
+
+# set insertion point in focused container
+# bro what does this even mean
+ctrl + alt - h : yabai -m window --insert west
+ctrl + alt - j : yabai -m window --insert south
+ctrl + alt - k : yabai -m window --insert north
+ctrl + alt - l : yabai -m window --insert east
+ctrl + alt - i : yabai -m window --insert stack
+
+#stacks
+## Stacks (shift + ctrl - ...)
+# Add the active window to the window or stack to the {direction}: shift + ctrl - {j, k, l, ö}
+shift + alt - h    : yabai -m window  west --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+shift + alt - j    : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+shift + alt - k    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+shift + alt - l : yabai -m window  east --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+
+# Stack Navigation: shift + ctrl - {n, p}
+alt - n : yabai -m window --focus stack.next
+alt - p : yabai -m window --focus stack.prev
+

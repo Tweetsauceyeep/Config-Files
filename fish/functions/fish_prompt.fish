@@ -13,8 +13,8 @@ function fish_prompt
         and set color $fish_color_cwd_root
     end
     echo -n [
-    set_color cyan
-    echo -n "j@$(prompt_hostname) - kyoto "
+    set_color normal
+    echo -n "j@$(prompt_hostname)-kyoto "
     set_color normal
     echo -n (BASENAME $PWD)
     set_color normal

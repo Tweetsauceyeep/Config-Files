@@ -23,6 +23,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coff
 " :GitFiles search
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden -g "!{node_modules,.git}" '
 nmap <silent> <leader>f ;Files<CR>
+nmap <silent> <leader><leader> ;Files<CR>
 nmap <silent> <leader>j ;Rg<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 "With the above, every time we invoke Rg, FZF + ripgrep will not consider filename as a match in Vim.

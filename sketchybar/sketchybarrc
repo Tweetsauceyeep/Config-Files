@@ -29,7 +29,7 @@ YELLOW="0xfffabd2f"
 ##y_offset=5       \
                  #padding_right=16  \
 
-sketchybar --bar height=35         \
+sketchybar --bar height=26         \
                  position=bottom\
                  sticky=off        \
                  padding_left=24   \

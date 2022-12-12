@@ -6,10 +6,11 @@ alias bat="$HOME/.config/bin/bat-v0.22.1-x86_64-apple-darwin/bat"
 
 set -g fish_color_autosuggestion purple
 set -g fish_color_normal white
-set -g fish_color_command blue
+set -g fish_color_command cyan
 set -g fish_color_valid_path cyan
 set -g fish_color_param cyan
 set -g fish_color_error red
+
 
 fish_add_path /usr/local/bin #new
 

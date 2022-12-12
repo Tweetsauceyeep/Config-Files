@@ -17,7 +17,9 @@ Plug 'sirver/ultisnips', {'for': ['javascript', 'tex', 'html', 'python']}
 Plug 'vimwiki/vimwiki', {'for': 'markdown'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
 Plug 'alvan/vim-closetag', {'for': ['javascript', 'html']}
-Plug 'lifepillar/vim-gruvbox8'
+"Plug 'lifepillar/vim-gruvbox8'
+Plug 'NLKNguyen/papercolor-theme'
+"Plug 'owickstrom/vim-colors-paramount'
 call plug#end()
 syntax on
 "close tag
@@ -27,6 +29,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coff
 " :GitFiles search
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden -g "!{node_modules,.git}" '
 nmap <silent> <leader>f ;Files<CR>
+nmap <silent> <leader><leader> ;Files<CR>
 nmap <silent> <leader>j ;Rg<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 "With the above, every time we invoke Rg, FZF + ripgrep will not consider filename as a match in Vim.
@@ -80,16 +83,12 @@ nnoremap <leader>m :MarkdownPreviewToggle<CR>
 let g:mkdp_auto_start = 0
 let g:mkdp_auto_close = 1
 
-
-" CTRLP
-let g:ctrlp_working_path_mode = 'ra'
-
 " ------------------- Color Settings --------------------
-syntax on
-set termguicolors
+"set termguicolors
+colors PaperColor
 set background=dark
-color gruvbox8
 hi Normal guibg=NONE ctermbg=NONE
+
 
 " ------------------- mac copy pasting -------------------
 vnoremap \y y:call system("pbcopy", getreg("\""))<CR>
@@ -103,7 +102,7 @@ noremap XX "+x<CR>
 
 " ------------------- Status Bar -------------------
 set laststatus=2
-"hi User2 ctermfg=white ctermbg=blue guifg=#ffffff guibg=#689d6a
+hi User2 ctermfg=white ctermbg=blue guifg=#ffffff guibg=#689d6a
 let g:currentmode={
        \ 'n'  : '[N]',
        \ 'v'  : '[V]',
@@ -117,6 +116,11 @@ let g:currentmode={
        \ 's'  : '[S]',
        \}
 set statusline=
-set statusline+=%2*\ %{toupper(g:currentmode[mode()])}
+set statusline+=%2*\ %{toupper(g:currentmode[mode()])}\ 
 set statusline+=%4*\ %t\ \                                
 "set statusline+=%4*\ \ \                                
+
+
+"+++++++++ VIM WIKI ++++++++++++++++++++
+let g:vimwiki_list = [{'path': '~/Obsidian-Notes/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]

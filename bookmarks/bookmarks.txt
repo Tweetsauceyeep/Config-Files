@@ -44,3 +44,5 @@ https://d12frosted.io/posts/2022-04-23-yabai-spaces.html #automatic organization
 https://stackoverflow.com/questions/16082991/vim-switching-between-files-rapidly-using-vanilla-vim-no-plugins/16084326#16084326
 https://www.youtube.com/watch?v=i1DyGlidnR4 #making an iphone usable in 2021!!!
 https://monkeytype.com/
+https://wiki.osdev.org/Main_Page
+https://gitlab.com/protesilaos/tempus-themes#project-overview
