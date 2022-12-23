@@ -1,0 +1,43 @@
+
+env:
+  TERM: xterm-256color
+window:
+  decorations: buttonless
+  opacity: 1
+    #opacity: 0.80
+  padding:
+    x: 5
+    y: 15
+  class:
+    instance: Alacritty
+    general: Alacritty
+  scrolling:
+    history: 5000
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    #family: CozetteVector
+    #style: Regular
+    #family: Tamzen
+    #style: Medium
+    #family: JetBrainsMono Nerd Font Mono
+    family: Iosevka Nerd Font
+    style: Regular
+    #family: Glass TTY VT220
+    #style: Medium
+  #size: 19
+  size: 15
+  bold:
+    family: CaskaydiaCove Nerd Font
+    style: Bold
+  italic:
+    family: CaskaydiaCove Nerd Font
+    style: Light Italic
+
+key_bindings:
+  - { key: N, mods: Command, action: SpawnNewInstance }
+

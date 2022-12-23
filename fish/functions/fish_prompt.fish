@@ -3,7 +3,7 @@ function fish_prompt
     # alfa@nobby /path/to/dir $
     # with the path shortened and colored
     # and a "#" instead of a "$" when run as root.
-    set fish_prompt_pwd_dir_length 1
+    set fish_prompt_pwd_dir_length 0
     set -l symbol '$ '
     set -l color $fish_color_cwd
     set -l blue_col blue
@@ -16,7 +16,8 @@ function fish_prompt
     set_color normal
     echo -n "j@$(prompt_hostname)-kyoto "
     set_color normal
-    echo -n (BASENAME $PWD)
+    #echo -n (prompt_pwd)
+    echo -n (basename $PWD)
     set_color normal
     echo -n ]
     set_color normal

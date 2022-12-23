@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-#sketchybar --animate sin 30 --set $NAME icon.highlight=$SELECTED background.drawing=$SELECTED
+# The $SELECTED variable is available for space components and indicates if
+# the space invoking this script (with name: $NAME) is currently selected:
+# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
 
+sketchybar --set $NAME background.drawing=$SELECTED

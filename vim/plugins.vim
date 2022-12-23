@@ -1,21 +1,29 @@
+",'for': ['javascript', 'html', 'json', 'python','markdown', 'shell', 'bash', 'tex', 'vim', 'config']
 "========== PLUGINS ============
 call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release','for': ['javascript', 'html', 'json', 'python','markdown', 'shell', 'bash', 'tex']}
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf'
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['javascript', 'html', 'json', 'python','markdown', 'shell', 'bash', 'tex', 'vim', 'config', 'go']}
+"Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'branch': 'release/0.x',
   \ 'for': 'javascript'
   \ }
 "Plug 'lervag/vimtex', {'for': ['tex', 'markdown']}
-Plug 'sirver/ultisnips', {'for': ['javascript', 'tex', 'html', 'python']}
+"Plug 'sirver/ultisnips', {'for': ['javascript', 'tex', 'html', 'python']}
 Plug 'vimwiki/vimwiki', {'for': 'markdown'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
 Plug 'alvan/vim-closetag', {'for': ['javascript', 'html']}
-Plug 'lifepillar/vim-gruvbox8'
+Plug 'maxmellon/vim-jsx-pretty', {'for': 'javascript'}
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+"Plug 'lifepillar/vim-gruvbox8'
+Plug 'conweller/findr.vim'
+Plug 'dstein64/vim-startuptime'
+" Build the extra binary if cargo exists on your system.
 call plug#end()
 syntax on
+
+
 "close tag
 let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 " =================== FZF ================
@@ -45,38 +53,18 @@ let g:fzf_colors =
       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
       \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
       \ 'hl+':     ['fg', 'Statement'],
-      \ 'info':    ['fg', 'yep'],
-      \ 'border':  ['fg', 'FZFTest'],
-      \ 'prompt':  ['fg', 'Conditional'],
-      \ 'pointer': ['fg', 'Exception'],
-      \ 'marker':  ['fg', 'Keyword'],
-      \ 'spinner': ['fg', 'Label'],
-      \ 'header':  ['fg', 'Comment'] }
+      \}
 
-"========= COC ==============
-let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-json',
-  \ 'coc-css',
-  \ 'coc-html',
-  \]
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-"+++++++++ VIM WIKI ++++++++++++++++++++
-let g:vimwiki_list = [{'path': '~/Obsidian-Notes/',
+" VIMWIKI
+let g:vimwiki_list = [{'path': '$HOME/Notes/Obsidian-Notes/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
-"++++++++++++++++++ VIM MARKDOWN PREVIEW +++++++++++++++++=
+function! VimwikiLinkHandler(link)
+    if a:link =~ '\.\(pdf\|jpg\|jpeg\|png\|gif\)$'
+        call vimwiki#base#open_link(':e ', 'file:'.a:link)
+        return 1
+    endif
+    return 0
+endfunction
 
-nnoremap <leader>m :MarkdownPreviewToggle<CR>
-" set to 1, nvim will open the preview window after entering the markdown buffer
-let g:mkdp_auto_start = 0
-let g:mkdp_auto_close = 1
-
-
-" CTRLP
-let g:ctrlp_working_path_mode = 'ra'

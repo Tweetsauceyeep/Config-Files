@@ -46,3 +46,17 @@ https://www.youtube.com/watch?v=i1DyGlidnR4 #making an iphone usable in 2021!!!
 https://monkeytype.com/
 https://wiki.osdev.org/Main_Page
 https://gitlab.com/protesilaos/tempus-themes#project-overview
+https://labs.tineye.com/multicolr/#colors=282828,3c3836,665c54;weights=33,34,33;
+https://www.artstation.com/guweiz
+https://discord.com/channels/@me
+https://www.pinterest.ph/
+https://www.artstation.com/somartist
+https://www.artstation.com/artwork/o2gZLL
+https://www.artstation.com/artwork/mzPoaE
+https://www.artstation.com/artwork/Z5OalR
+https://devhints.io/express
+https://devhints.io/react
+https://stackoverflow.com/questions/1898987/how-to-exclude-file-patterns-in-vimgrep
+https://www.youtube.com/watch?v=wh_WGWii7UE&t=928s #vim notetaking with cool no plugin text search
+https://gist.github.com/Gavinok/43d004e767e65694f6e8a9cdfe5afb61 ##vim notetaking with cool no plugin text search
+https://vim.fandom.com/wiki/Find_in_files_within_Vim#Old_search_results

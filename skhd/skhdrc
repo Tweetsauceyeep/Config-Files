@@ -1,9 +1,14 @@
 #SKHD STUFF
+# LAYOUT
+cmd + alt - o : yabai -m space --layout bsp
+cmd + alt - p : yabai -m space --layout stack
+
+
 
 # opening apps
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty     # open a terminal
+ctrl - return : $HOME/.config/scripts/scratchpad.sh
 cmd + alt - e : /Applications/Alacritty.app/Contents/MacOS/alacritty -e lf
-cmd + alt - o : open -a obsidian
 cmd + alt - a : open $HOME/Wallpapers
 cmd + alt - m : /Applications/Alacritty.app/Contents/MacOS/alacritty -e spt
 cmd + alt - s : open $HOME/pictures/screenshots
@@ -12,28 +17,31 @@ hyper - w : open -a "Brave Browser"
 
 # DMENU
 #ctrl - b : ~/.config/scripts/popup.sh .config/scripts/bookmarks.sh
-cmd + alt - return : ~/.config/scripts/bookmarks.sh
-ctrl - m : ~/.config/scripts/applauncher.sh
+ctrl - b : ~/.config/scripts/bookmarks.sh
+hyper - d : ~/.config/scripts/applauncher.sh
 cmd + alt - v : ~/.config/scripts/addBookmarks.sh
 cmd + alt - w : ~/.config/scripts/changewallpaper.sh
 cmd + alt - n :  ~/.config/scripts/pdf-launcher.sh
 cmd + alt - c : /Applications/Alacritty.app/Contents/MacOS/alacritty -e $HOME/.config/scripts/notetaking.sh
-ctrl - b : $HOME/.config/scripts/confedit.sh
-cmd + alt - p : $HOME/.config/scripts/popup.sh $HOME/.config/scripts/dmenuemojis.sh
+cmd + alt - return : $HOME/.config/scripts/confedit.sh
+cmd + alt - u : $HOME/.config/scripts/popup.sh $HOME/.config/scripts/dmenuemojis.sh
+hyper - a : $HOME/.config/scripts/tmuxdmenu.sh
+hyper - s : $HOME/.config/scripts/todo
 
 ### Yabai stuff ###
+alt - b : yabai -m space --balance
 cmd + alt - b : yabai -m window --toggle border                                                            # toggle border for the focused window
 cmd + alt - f : yabai -m window --toggle native-fullscreen                                                   # Toggle parent zoom
-cmd + alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Float/unfloat the focused window
-cmd + alt - t : yabai -m window --toggle float; yabai --trigger window_focus 
+cmd + alt - y : yabai -m window --toggle float; yabai --trigger window_focus 
 #cmd + alt - x : yabai -m config top_padding 0 && yabai -m config bottom_padding 0 && yabai -m config left_padding 0 && yabai -m config right_padding 0; yabai -m config window_gap 0
 cmd + alt - x : yabai -m space --toggle padding; yabai -m space --toggle gap
-cmd + alt - z : yabai -m config top_padding 20; yabai -m config bottom_padding 20; yabai -m config left_padding 20; yabai -m config right_padding 20; yabai -m config window_gap 10
+cmd + alt - t : yabai -m config top_padding 20; yabai -m config bottom_padding 20; yabai -m config left_padding 20; yabai -m config right_padding 20; yabai -m config window_gap 10
+cmd + alt - r : yabai -m config top_padding 60; yabai -m config bottom_padding 60; yabai -m config left_padding 60; yabai -m config right_padding 60; yabai -m config window_gap 10
 ### Movement ###
-cmd + alt - h : yabai -m window --move rel:-30:0
-cmd + alt - j : yabai -m window --move rel:0:30
-cmd + alt - k : yabai -m window --move rel:0:-30
-cmd + alt - l : yabai -m window --move rel:30:0
+#cmd + alt - h : yabai -m window --move rel:-30:0
+#cmd + alt - j : yabai -m window --move rel:0:30
+#cmd + alt - k : yabai -m window --move rel:0:-30
+#cmd + alt - l : yabai -m window --move rel:30:0
 ### NOT USING ###
 #cmd + alt - p : yabai -m config top_padding               10
 #cmd + alt - u : yabai -m config top_padding               45
@@ -43,7 +51,7 @@ cmd + alt - l : yabai -m window --move rel:30:0
 
 # if you're having troubles finding key codes for a key just type skhd --observe in a terminal and type a key. Pretty cool! Or just check the wiki.
 hyper - t : yabai -m config active_window_opacity        1.0
-hyper - y : yabai -m config active_window_opacity        0.9
+hyper - y : yabai -m config active_window_opacity        0.96
 
 
 
@@ -119,7 +127,7 @@ hyper - p : yabai -m window --resize right:20:0 ; yabai -m window --resize left:
 hyper - r : yabai -m space --rotate 90
 
 ## toggle window fullscreen zoom
-cmd + alt - p : yabai -m window --toggle zoom-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
 
 # set insertion point in focused container
 # bro what does this even mean
@@ -131,13 +139,23 @@ ctrl + alt - i : yabai -m window --insert stack
 
 #stacks
 ## Stacks (shift + ctrl - ...)
-# Add the active window to the window or stack to the {direction}: shift + ctrl - {j, k, l, ö}
+#151515 Add the active window to the window or stack to the {direction}: shift + ctrl - {j, k, l, ö}
 shift + alt - h    : yabai -m window  west --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
 shift + alt - j    : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
 shift + alt - k    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
 shift + alt - l : yabai -m window  east --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
 
 # Stack Navigation: shift + ctrl - {n, p}
-alt - n : yabai -m window --focus stack.next
-alt - p : yabai -m window --focus stack.prev
+alt - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+alt - p : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+
+# focus the next stacked window if possible; otherwise focus the next window or go back to the first window
+alt - tab : yabai -m window --focus stack.next || yabai -m window --focus stack.first  
+
+### Warping
+cmd + alt - h : yabai -m window --swap west
+cmd + alt - j : yabai -m window --swap south
+cmd + alt - k : yabai -m window --swap north
+cmd + alt - l : yabai -m window --swap east
+
 

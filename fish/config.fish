@@ -1,8 +1,8 @@
-# something about vim backspace not working lmao
+#something about vim backspace not working lmao
 fish_vi_key_bindings
 set fish_greeting
 alias nvim="$HOME/Programming/bin/nvim-osx64/bin/nvim"
-alias bat="$HOME/.config/bin/bat-v0.22.1-x86_64-apple-darwin/bat"
+alias bat="$HOME/Programming/bin/bat-v0.8.0-x86_64-apple-darwin/bat"
 
 set -g fish_color_autosuggestion purple
 set -g fish_color_normal white
@@ -18,6 +18,7 @@ fish_add_path /usr/local/bin #new
 set -x PATH "/Library/Frameworks/Python.framework/Versions/3.10/bin" "$PATH"
 set -x PATH "/Users/Sia/.cargo/bin"
 
+# apparently dont set term in da shell but in da alacritty
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*}"'
 export FZF_DEFAULT_OPTS='-m --height 50%'
@@ -33,12 +34,15 @@ export FZF_DEFAULT_OPTS='-m --height 50%'
 
 # ALIASES
 alias typetest "tt -n 10"
-alias ll "~/.config/bin/exa-macos-x86_64-v0.10.0/bin/exa -l -g --icons"
+#alias ll "~/.config/bin/exa-macos-x86_64-v0.10.0/bin/exa -l -g --icons"
 alias ce "$HOME/.config/scripts/terminal-confedit.sh"
 alias tm "tmux"
 alias alt "alacritty-themes"
 alias onotes "$HOME/.config/scripts/notetaking.sh"
+alias chtsh "~/.config/scripts/cht.sh"
+alias nf "neofetch"
 
+#alias ls "logo-ls"
 function gacp
   git add . && git commit -m "$argv"
   git push origin main

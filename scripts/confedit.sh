@@ -2,6 +2,7 @@
 
 EDITOR="vim"
 TITLE="configterm"
+TERMINAL="/Applications/Alacritty.app/Contents/MacOS/alacritty"
 
 declare -a options=(
 "vim - $HOME/.config/vim/.vimrc"
@@ -17,11 +18,12 @@ declare -a options=(
 "bookmarks - $HOME/.config/bookmarks/bookmarks.txt"
 "lf - $HOME/.config/lf/lfrc"
 "spotifyd - $HOME/.config/spotifyd/spotifyd.conf"
+"spacebar - $HOME/.config/spacebar/spacebarrc"
 "quit"
 )
 
 open -a Xquartz
-choice=$(printf '%s\n' "${options[@]}" | sort | dmenu -l '15' -p  'config:')
+choice=$(printf '%s\n' "${options[@]}" | sort | dmenu -l '20' -p  'config:' -c)
 
 if [[ "$choice" == "quit" ]]; then
   yabai -m display --focus recent
@@ -30,9 +32,11 @@ if [[ "$choice" == "quit" ]]; then
 elif [ "$choice" ]; then 
   cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}' )
  #/Applications/Alacritty.app/Contents/MacOS/alacritty -t "${TITLE}" -e  "$EDITOR" "$cfg"
- /Applications/Alacritty.app/Contents/MacOS/alacritty -t "${TITLE}" -e "$EDITOR" "$cfg"
+  $TERMINAL -t "${TITLE}" -e "$EDITOR" "$cfg"
 
 else 
   echo "Program Terminated"
 
 fi
+
+yabai -m window --focus recent

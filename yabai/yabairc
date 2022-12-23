@@ -1,33 +1,43 @@
 #!/usr/bin/env sh
 
-yabai -m config external_bar main:0:26
+yabai -m config external_bar main:0:25
 yabai -m config layout bsp
-yabai -m config window_shadow                on
 yabai -m config window_shadow                float
+#yabai -m config window_shadow                float
 yabai -m config window_opacity               on
 #yabai -m config window_opacity_duration      0.065
-yabai -m config window_opacity_duration      0.0
+#yabai -m config window_opacity_duration      0.0
+yabai -m config window_opacity_duration     0
+
 yabai -m config active_window_opacity        1
-#yabai -m config normal_window_opacity        0.88
+#yabai -m config normal_window_opacity        0.9
 yabai -m config window_border                on
 yabai -m config window_border_width          5
 yabai -m config window_placement             second_child
-#yabai -m config active_window_border_color   0xff88C0D0 #nord light blue
-yabai -m config active_window_border_color   0xff1793D1
-#yabai -m config active_window_border_color   0xff83a598 #gruv blue
-#yabai -m config active_window_border_color   0xff98971a #gruv greenish
-#yabai -m config active_window_border_color   0xff689d6b #gruv aqua
-yabai -m config normal_window_border_color   0xaa282828
+yabai -m config active_window_border_color   0xff2e9ef4 #default i3 Blue
+yabai -m config normal_window_border_color   0xff282828
 #yabai -m config window_animation_duration 0.35
-yabai -m config window_animation_duration 0
+yabai -m config window_animation_duration 1
 yabai -m config insert_feedback_color        0xffd75f5f
+
+# unused colors for border shuts
+#yabai -m config active_window_border_color   0xff1793D1 #arch blue breh
+#yabai -m config active_window_border_colro   0xff2e9ef4 #default i3 Blue
+#yabai -m config active_window_border_color   0xff689d6b #gruv aqua
+#yabai -m config active_window_border_color   0xff458588  #gruv darker blye
+#yabai -m config active_window_border_color   0xffebdbb2  #gruv white
+#yabai -m config active_window_border_color   0xff83a598 #gruv light blue breh
+#yabai -m config active_window_border_color   0xff58D6EC #idk
+#yabai -m config active_window_border_color   0xff4c7899 #i3 blue
+#yabai -m config active_window_border_color   0xff88C0D0 #nord light blue
+#yabai -m config active_window_border_color   0xff98971a #gruv greenish
 
 # Mouse Modifiers 
 yabai -m config mouse_modifier cmd
 yabai -m config mouse_action1              resize
 yabai -m config mouse_action2              move
 yabai -m config mouse_drop_action          swap
-#yabai -m config focus_follows_mouse       autoraise
+yabai -m config focus_follows_mouse       autoraise
 
 
 yabai -m space 1 --label one
@@ -37,6 +47,8 @@ yabai -m space 4 --label four
 yabai -m space 5 --label five
 yabai -m space 6 --label six
 yabai -m space 7 --label seven
+
+yabai -m config --space 3 layout stack
 
 
 # float system preferences| makes yabai ignore some stuff
@@ -61,12 +73,15 @@ yabai -m rule --add app="^Brave Browser$" space=3
  
 # Launcher terminal
 yabai -m rule --add title="popuplauncher" manage=off sticky=on layer=above border=off
+yabai -m rule --add title="scratchpad" manage=off sticky=off layer=above border=off
 yabai -m rule --add title="configterm" manage=on sticky=off 
 
-yabai -m config left_padding                 45
-yabai -m config right_padding                45
-yabai -m config top_padding                  40
-yabai -m config bottom_padding               40
+yabai -m config left_padding                 15
+yabai -m config right_padding                15
+yabai -m config top_padding                  15
+yabai -m config bottom_padding               15
 yabai -m config window_gap                   10
 
+
 echo "yabai configuration loaded.. mybro"
+

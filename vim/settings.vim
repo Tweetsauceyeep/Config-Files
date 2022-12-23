@@ -4,13 +4,20 @@
 "Always show current position
 "set autochdir changes dr to whatever current file lives
 
-set lazyredraw             " Only redraw when necessary.
+set path+=**
+set ruler
 set backspace=indent,eol,start
 fixdel
 " basics
 set dictionary+=/usr/share/dict/words
-set noshowmode
+"set noshowmode
+
 set wildmenu
+set wildmode=longest:full,full                 "How the completion is done
+set wildignorecase                             "Case insensitive completion
+set wildignore=node_modules/**,*.git/*,*.tags,tags,*.o,*.class "what to ignore in completion
+
+
 set ignorecase smartcase
 set encoding=utf-8
 set noswapfile
@@ -29,9 +36,9 @@ set mouse=a            " Enable mouse drag on window splits
 set shiftwidth=2
 set tabstop=2 softtabstop=2
 set expandtab
-let &t_EI = "\<Esc>[2 q"
-let &t_SR = "\<Esc>[3 q"
-let &t_SI = "\<Esc>[6 q"
+"let &t_EI = "\<Esc>[2 q"
+"let &t_SR = "\<Esc>[3 q"
+"let &t_SI = "\<Esc>[6 q"
 "  1 -> blinking block
 "  2 -> solid block
 "  3 -> blinking underscore
