@@ -19,6 +19,7 @@ declare -a options=(
 "lf - $HOME/.config/lf/lfrc"
 "spotifyd - $HOME/.config/spotifyd/spotifyd.conf"
 "spacebar - $HOME/.config/spacebar/spacebarrc"
+"qutebrowser - $HOME/.qutebrowser/config.py"
 "quit"
 )
 

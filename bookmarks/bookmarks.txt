@@ -60,3 +60,7 @@ https://stackoverflow.com/questions/1898987/how-to-exclude-file-patterns-in-vimg
 https://www.youtube.com/watch?v=wh_WGWii7UE&t=928s #vim notetaking with cool no plugin text search
 https://gist.github.com/Gavinok/43d004e767e65694f6e8a9cdfe5afb61 ##vim notetaking with cool no plugin text search
 https://vim.fandom.com/wiki/Find_in_files_within_Vim#Old_search_results
+https://github.com/Bugswriter/notflix
+https://github.com/jlebon/textern #use vim to edit browser text spaces
+https://github.com/mpv-player/mpv#system-requirements
+https://www.google.com/search?q=ubuntu+mono&oq=ubuntu+mono&aqs=chrome..69i57.2426j0j1&sourceid=chrome&ie=UTF-8

@@ -70,7 +70,7 @@ yabai -m rule --add app="Anki"  manage=off
 yabai -m rule --add app="^Spotify$" space=2
 yabai -m rule --add app="^Alacritty$" 
 yabai -m rule --add app="^Brave Browser$" space=3
- 
+yabai -m rule --add app=Emacs manage=on 
 # Launcher terminal
 yabai -m rule --add title="popuplauncher" manage=off sticky=on layer=above border=off
 yabai -m rule --add title="scratchpad" manage=off sticky=off layer=above border=off

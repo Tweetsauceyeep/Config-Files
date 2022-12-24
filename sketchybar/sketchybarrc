@@ -46,7 +46,7 @@ sketchybar --default updates=when_shown                    \
 # https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
 # to indicate active and available mission control spaces
 
-SPACE_ICONS=("~" "1" "2" "3" "4" "5" "6" "7" "8" "9")
+SPACE_ICONS=("~" "1 " "2 " "3 " "4 " "5 " "6 " "7 " "8 " "9 ")
 
 for i in "${!SPACE_ICONS[@]}"
 do
@@ -54,8 +54,8 @@ do
   sketchybar --add space space.$sid left                                 \
              --set space.$sid associated_space=$sid                      \
                               icon=${SPACE_ICONS[i]}                     \
-                              icon.padding_left=8                        \
-                              icon.padding_right=8                       \
+                              icon.padding_left=10                        \
+                              icon.padding_right=10                       \
                               background.padding_left=5                  \
                               background.padding_right=5                 \
                               background.color=$I3BarBlue                \
